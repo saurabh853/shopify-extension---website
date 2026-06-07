@@ -2,31 +2,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shopify-exporter.exnta.com/</loc>
-    <lastmod>2025-06-07</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://shopify-exporter.exnta.com/privacy.html</loc>
-    <lastmod>2025-06-07</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://shopify-exporter.exnta.com/terms.html</loc>
-    <lastmod>2025-06-07</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://shopify-exporter.exnta.com/blog/</loc>
-    <lastmod>2025-06-07</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shopify-exporter.exnta.com/blog/how-to-export-shopify-products-to-csv.html</loc>
-    <lastmod>2025-06-07</lastmod>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/top-5-shopify-product-scrapers-for-dropshippers.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-migrate-products-from-shopify-to-woocommerce.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/ultimate-guide-to-shopify-competitor-product-analysis.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-export-shopify-product-images-in-bulk.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-import-shopify-product-csv-into-google-sheets.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/best-practices-for-shopify-store-product-catalog-backup.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-find-hidden-best-selling-products-on-shopify.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-extract-shopify-product-variants-and-pricing-data.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/step-by-step-guide-to-cloning-shopify-store-catalog.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-fix-shopify-product-csv-import-errors.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/why-local-browser-scraping-is-safer-than-cloud-scrapers.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-use-product-export-data-to-optimize-pricing.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/how-to-export-shopify-inventory-levels-and-skus.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shopify-exporter.exnta.com/blog/role-of-product-data-scraping-in-ecommerce-market-research.html</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
