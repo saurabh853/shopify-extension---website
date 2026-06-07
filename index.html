@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Shopify Product Exporter | Export Shopify Products to CSV in One Click</title>
+  <meta name="description" content="Export products from any Shopify store to CSV, Excel, or JSON in one click. The fastest Chrome extension for dropshippers, merchants, and developers. 100% free, runs locally.">
+  <meta name="keywords" content="Shopify Product Exporter, Shopify product exporter, export Shopify to CSV, export Shopify to Excel, Shopify store spy, dropshipping product research, Shopify catalog exporter, product scraper Chrome extension">
+  <meta name="author" content="Exnta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shopify-exporter.exnta.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shopify-exporter.exnta.com/">
+  <meta property="og:title" content="Shopify Product Exporter | Export Shopify Products to CSV in One Click">
+  <meta property="og:description" content="Export products from any Shopify store to CSV, Excel, or JSON in one click. The fastest Chrome extension for dropshippers, merchants, and developers.">
+  <meta property="og:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Shopify Product Exporter">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://shopify-exporter.exnta.com/">
+  <meta name="twitter:title" content="Shopify Product Exporter | Export Shopify Products to CSV in One Click">
+  <meta name="twitter:description" content="Export products from any Shopify store to CSV, Excel, or JSON in one click. The fastest Chrome extension for dropshippers, merchants, and developers.">
+  <meta name="twitter:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/icon128.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/icon128.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.4">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Shopify Product Exporter",
+    "description": "Export products from any Shopify store to CSV, Excel, or JSON in one click. Chrome extension for dropshippers, Shopify merchants, and developers.",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge, Brave, Opera",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "120"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Exnta",
+      "url": "https://shopify-exporter.exnta.com"
+    },
+    "url": "https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc",
+    "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png"
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Exnta",
+    "url": "https://shopify-exporter.exnta.com",
+    "logo": "https://shopify-exporter.exnta.com/assets/images/icon128.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@exnta.com",
+      "contactType": "Customer Support"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does this work on all Shopify stores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! The exporter works seamlessly on any storefront built with Shopify, even on customized templates, headless setups, and stores using custom domains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data safe when using this extension?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. All data processing happens 100% locally in your browser. No data is ever sent to external servers. We do not collect, store, or transmit any of your scraped data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export to Excel format?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can export to CSV, Excel (.xlsx), or JSON. Excel exports include styled headers, auto-column widths, and a dedicated variants worksheet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will the store owner know I'm scraping their products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The extension operates locally and accesses publicly available product catalog data. You can also enable Slow Mode to add natural delays for extra safety."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I import the exported CSV directly into my own Shopify store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! The CSV format is structured to align with Shopify import schemas, making it fast and easy to migrate catalogs, copy products, or build competitor benchmarks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this extension free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the core features are completely free. There is also a Pro tier that unlocks unlimited exports, advanced analytics, duplicate finder, and priority support."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Shopify Product Exporter Home">
+        <img src="assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+        <span class="nav__logo-text">Shopify Product Exporter</span>
+      </a>
+      <div class="nav__links" id="nav-links" role="menubar">
+        <a href="/#features" class="nav__link" role="menuitem">Features</a>
+        <a href="/#how-it-works" class="nav__link" role="menuitem">How it Works</a>
+        <a href="/blog/" class="nav__link" role="menuitem">Blog</a>
+        <a href="/privacy.html" class="nav__link" role="menuitem">Privacy</a>
+        <a href="/terms.html" class="nav__link" role="menuitem">Terms</a>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="nav__cta" target="_blank" rel="noopener noreferrer" role="menuitem" id="nav-install-btn">
+          Install Free
+        </a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero__bg">
+      <div class="glow-orb glow-orb--teal" style="top: -10%; left: 20%;"></div>
+      <div class="glow-orb glow-orb--purple" style="top: 10%; right: 10%;"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Chrome Extension — Free to Install
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          Export Shopify Products to CSV <span class="text-gradient">in One Click</span>
+        </h1>
+        <p class="hero__subtitle">
+          Instantly scrape and export product data from any Shopify store. CSV, Excel, or JSON — all processed locally in your browser.
+        </p>
+        <div class="hero__actions">
+          <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="btn btn--primary" target="_blank" rel="noopener noreferrer" id="hero-install-btn">
+            <span class="btn__chrome-icon" aria-hidden="true"></span>
+            Add to Chrome — It's Free
+          </a>
+          <a href="#features" class="btn btn--secondary" id="hero-learn-btn">
+            Learn More
+            <svg class="btn__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+        <div class="hero__image-wrapper">
+          <img src="assets/images/hero-banner.png" alt="Shopify Product Exporter Product Exporter dashboard showing product data extraction and CSV export interface" class="hero__image" width="960" height="504" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="stats section" aria-label="Extension statistics">
+    <div class="container">
+      <div class="stats__grid reveal">
+        <div class="stat" id="stat-exports">
+          <div class="stat__value">50K+</div>
+          <div class="stat__label">Products Exported</div>
+        </div>
+        <div class="stat" id="stat-users">
+          <div class="stat__value">2K+</div>
+          <div class="stat__label">Active Users</div>
+        </div>
+        <div class="stat" id="stat-rating">
+          <div class="stat__value">4.8★</div>
+          <div class="stat__label">Chrome Web Store</div>
+        </div>
+        <div class="stat" id="stat-local">
+          <div class="stat__value">100%</div>
+          <div class="stat__label">Local Processing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features section" id="features" aria-labelledby="features-title">
+    <div class="container">
+      <div class="glow-orb glow-orb--purple" style="top: 50%; left: -15%;"></div>
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Features</span>
+        <h2 class="section__title" id="features-title">Everything You Need to <span class="text-gradient">Export Products</span></h2>
+        <p class="section__description">Powerful tools designed for speed, accuracy, and ease of use.</p>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card reveal" id="feature-scrape">
+          <div class="feature-card__icon feature-card__icon--teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="feature-card__title">1-Click Scraping</h3>
+          <p class="feature-card__text">Navigate to any Shopify store and extract the entire product catalog with a single click. Handles pagination automatically.</p>
+        </div>
+        <div class="feature-card reveal" id="feature-export">
+          <div class="feature-card__icon feature-card__icon--purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3 class="feature-card__title">Multi-Format Export</h3>
+          <p class="feature-card__text">Export to CSV, Excel (.xlsx), or JSON. Excel exports include styled headers, auto column widths, and variant worksheets.</p>
+        </div>
+        <div class="feature-card reveal" id="feature-dashboard">
+          <div class="feature-card__icon feature-card__icon--blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="feature-card__title">Advanced Dashboard</h3>
+          <p class="feature-card__text">Preview, filter, and search your scraped data before exporting. Virtual scroll handles thousands of products smoothly.</p>
+        </div>
+        <div class="feature-card reveal" id="feature-images">
+          <div class="feature-card__icon feature-card__icon--warm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h3 class="feature-card__title">Bulk Image Download</h3>
+          <p class="feature-card__text">Download all product images in bulk with smart renaming. Throttled batch processing bypasses browser limits safely.</p>
+        </div>
+        <div class="feature-card reveal" id="feature-privacy">
+          <div class="feature-card__icon feature-card__icon--teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="feature-card__title">100% Local & Private</h3>
+          <p class="feature-card__text">All processing happens in your browser sandbox. Zero data sent to servers. No tracking, no analytics, no cookies.</p>
+        </div>
+        <div class="feature-card reveal" id="feature-variants">
+          <div class="feature-card__icon feature-card__icon--purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Full Variant Parsing</h3>
+          <p class="feature-card__text">Extract every variant: price, compare-at price, SKU, inventory quantity, options, and high-res images per variant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section" id="how-it-works" aria-labelledby="steps-title">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">How it Works</span>
+        <h2 class="section__title" id="steps-title">Start Exporting in <span class="text-gradient">3 Simple Steps</span></h2>
+        <p class="section__description">No setup required. Install, navigate, and export.</p>
+      </div>
+      <div class="steps__grid">
+        <div class="step-card reveal" id="step-1">
+          <div class="step-card__number">1</div>
+          <h3 class="step-card__title">Install & Pin</h3>
+          <p class="step-card__text">Add the extension to Chrome from the Web Store and pin it to your toolbar for quick access.</p>
+        </div>
+        <div class="step-card reveal" id="step-2">
+          <div class="step-card__number">2</div>
+          <h3 class="step-card__title">Visit Any Store</h3>
+          <p class="step-card__text">Go to any Shopify-powered online store. The extension automatically detects if it's a Shopify site.</p>
+        </div>
+        <div class="step-card reveal" id="step-3">
+          <div class="step-card__number">3</div>
+          <h3 class="step-card__title">Scrape & Export</h3>
+          <p class="step-card__text">Click "Download Products" to export the entire catalog to CSV, Excel, or JSON instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHO IT'S FOR ========== -->
+  <section class="section" id="audience" aria-labelledby="audience-title">
+    <div class="container">
+      <div class="glow-orb glow-orb--teal" style="top: 30%; right: -10%;"></div>
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Who It's For</span>
+        <h2 class="section__title" id="audience-title">Built for <span class="text-gradient">E-Commerce Professionals</span></h2>
+        <p class="section__description">Whether you're sourcing products, migrating stores, or analyzing competitors — we've got you covered.</p>
+      </div>
+      <div class="audience__grid">
+        <div class="audience-card reveal" id="audience-dropshippers">
+          <div class="audience-card__icon" style="color: var(--color-accent-secondary); margin-bottom: var(--space-lg); display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2s-8 7-9 8a6.9 6.9 0 0 0-.76 8.35L1 23l2.83-8.17A6.9 6.9 0 0 0 12 14c1-1 8-9 8-9h2z"/><path d="M20 20c-1.5-1.5-2.5-3.2-3-5"/><path d="M4 4c1.5 1.5 3.2 2.5 5 3"/><circle cx="15" cy="9" r="1"/></svg>
+          </div>
+          <h3 class="audience-card__title">Dropshippers</h3>
+          <p class="audience-card__text">Research winning products, analyze pricing strategies, and export supplier catalogs for rapid product sourcing and listing.</p>
+        </div>
+        <div class="audience-card reveal" id="audience-merchants">
+          <div class="audience-card__icon" style="color: var(--color-accent-primary); margin-bottom: var(--space-lg); display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="M3 9l2.44-4.88A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.12L21 9"/><path d="M12 3v6"/></svg>
+          </div>
+          <h3 class="audience-card__title">Shopify Merchants</h3>
+          <p class="audience-card__text">Migrate products between stores, create backups of your catalog, or benchmark against competitors with structured data exports.</p>
+        </div>
+        <div class="audience-card reveal" id="audience-developers">
+          <div class="audience-card__icon" style="color: var(--color-accent-tertiary); margin-bottom: var(--space-lg); display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="10 7 8 9 10 11"/><polyline points="14 7 16 9 14 11"/></svg>
+          </div>
+          <h3 class="audience-card__title">Developers & Analysts</h3>
+          <p class="audience-card__text">Extract structured product data for integrations, market research, or building custom e-commerce tools and dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">FAQ</span>
+        <h2 class="section__title" id="faq-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+      </div>
+      <div class="faq__list" role="list">
+
+        <div class="faq-item reveal" id="faq-1" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-1-answer" id="faq-1-btn">
+            Does this work on all Shopify stores?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-1-answer" role="region" aria-labelledby="faq-1-btn">
+            <div class="faq-item__answer-inner">
+              Yes! The exporter works seamlessly on any storefront built with Shopify, even on customized templates, headless setups, and stores using custom domains. It detects Shopify automatically.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-2" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-2-answer" id="faq-2-btn">
+            Is my data safe when using this extension?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-2-answer" role="region" aria-labelledby="faq-2-btn">
+            <div class="faq-item__answer-inner">
+              Absolutely. All data processing happens 100% locally in your browser. No data is ever sent to external servers. We do not collect, store, or transmit any of your scraped data. The extension doesn't even have network permissions.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-3" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-3-answer" id="faq-3-btn">
+            Can I export to Excel format?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-3-answer" role="region" aria-labelledby="faq-3-btn">
+            <div class="faq-item__answer-inner">
+              Yes! You can export to CSV, Excel (.xlsx), or JSON. Excel exports include styled headers, auto-column widths, and a dedicated variants worksheet. CSV exports are UTF-8 encoded and compatible with Google Sheets, Microsoft Excel, and import wizards for WooCommerce and Shopify.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-4" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-4-answer" id="faq-4-btn">
+            Will the store owner know I'm scraping their products?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-4-answer" role="region" aria-labelledby="faq-4-btn">
+            <div class="faq-item__answer-inner">
+              No. The extension operates locally and accesses publicly available product catalog data. You can also enable "Slow Mode" in settings to add natural delays between requests for extra safety.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-5" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-5-answer" id="faq-5-btn">
+            Can I import the exported CSV into my own Shopify store?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-5-answer" role="region" aria-labelledby="faq-5-btn">
+            <div class="faq-item__answer-inner">
+              Absolutely! The CSV format is structured to align with Shopify import schemas, making it fast and easy to migrate catalogs, copy products, or build competitor benchmarks. It also works with WooCommerce and BigCommerce import wizards.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-6" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-6-answer" id="faq-6-btn">
+            Is this extension free to use?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq-6-answer" role="region" aria-labelledby="faq-6-btn">
+            <div class="faq-item__answer-inner">
+              Yes, the core features are completely free — including Shopify detection, product scraping, CSV export, and basic filtering. There's also a Pro tier that unlocks unlimited exports, Excel exports, advanced analytics, duplicate finder, and priority support.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section section" id="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-section__box reveal">
+        <div class="glow-orb glow-orb--teal" style="top: -50%; left: 50%; transform: translateX(-50%);"></div>
+        <h2 class="cta-section__title" id="cta-title">Ready to Export Shopify Products?</h2>
+        <p class="cta-section__text">Join thousands of e-commerce professionals using the fastest Shopify Product Exporter available.</p>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="btn btn--primary" target="_blank" rel="noopener noreferrer" id="cta-install-btn">
+          <span class="btn__chrome-icon" aria-hidden="true"></span>
+          Install Free on Chrome
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" aria-label="Shopify Product Exporter Home">
+            <img src="assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+            <span class="nav__logo-text">Shopify Product Exporter</span>
+          </a>
+          <p class="footer__brand-desc">The fastest way to export products from any Shopify store. Built by Exnta — 100% local, private, and free.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Product</h4>
+          <div class="footer__link-list">
+            <a href="/#features" class="footer__link">Features</a>
+            <a href="/#how-it-works" class="footer__link">How it Works</a>
+            <a href="/#faq" class="footer__link">FAQ</a>
+            <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="footer__link" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Resources</h4>
+          <div class="footer__link-list">
+            <a href="/blog/" class="footer__link">Blog</a>
+            <a href="/blog/how-to-export-shopify-products-to-csv.html" class="footer__link">Export Guide</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Legal</h4>
+          <div class="footer__link-list">
+            <a href="/privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="/terms.html" class="footer__link">Terms of Service</a>
+            <a href="mailto:support@exnta.com" class="footer__link">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Exnta. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy.html" class="footer__bottom-link">Privacy</a>
+          <a href="/terms.html" class="footer__bottom-link">Terms</a>
+          <a href="mailto:support@exnta.com" class="footer__bottom-link">support@exnta.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile toggle
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const mainNav = document.getElementById('main-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      mainNav.classList.toggle('nav-open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+      toggle.classList.toggle('active', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        mainNav.classList.remove('nav-open');
+        document.body.classList.remove('nav-open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item__question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+        });
+        // Open clicked item if it wasn't already open
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Scroll reveal animations
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

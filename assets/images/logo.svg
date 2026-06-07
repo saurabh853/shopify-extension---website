@@ -1,0 +1,38 @@
+<svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient (Deep modern slate) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    
+    <!-- Shopify Green Gradient (Emerald to Mint) -->
+    <linearGradient id="shopifyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for depth -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#10b981" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- 1. Deep Squircle Background for great contrast on all browser themes -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Subtle border to make it feel super premium -->
+  <rect x="6" y="6" width="500" height="500" rx="122" fill="none" stroke="#1e293b" stroke-width="4" stroke-opacity="0.5" />
+
+  <!-- 2. Shopping Bag Handle (Made taller and wider for perfect scale) -->
+  <path d="M175 165 C175 60, 337 60, 337 165" stroke="url(#shopifyGrad)" stroke-width="28" fill="none" stroke-linecap="round" />
+
+  <!-- 3. Shopping Bag Body (Expanded width and height to fill more background) -->
+  <path d="M120 165 H392 C412 165, 422 175, 427 190 L452 405 C457 430, 437 455, 412 455 H100 C75 455, 55 430, 60 405 L85 190 C90 175, 100 165, 120 165 Z" fill="url(#shopifyGrad)" filter="url(#shadow)" />
+
+  <!-- 4. Larger, Bolder High-Contrast Download Arrow in the center -->
+  <!-- Arrow Shaft -->
+  <line x1="256" y1="215" x2="256" y2="365" stroke="#ffffff" stroke-width="32" stroke-linecap="round" />
+  <!-- Arrow Head -->
+  <path d="M196 305 L256 365 L316 305" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
