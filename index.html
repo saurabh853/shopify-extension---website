@@ -185,9 +185,8 @@
       <div class="nav__links" id="nav-links" role="menubar">
         <a href="/#features" class="nav__link" role="menuitem">Features</a>
         <a href="/#how-it-works" class="nav__link" role="menuitem">How it Works</a>
+        <a href="/#pricing" class="nav__link" role="menuitem">Pricing</a>
         <a href="/blog/" class="nav__link" role="menuitem">Blog</a>
-        <a href="/privacy.html" class="nav__link" role="menuitem">Privacy</a>
-        <a href="/terms.html" class="nav__link" role="menuitem">Terms</a>
         <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="nav__cta" target="_blank" rel="noopener noreferrer" role="menuitem" id="nav-install-btn">
           Install Free
         </a>
@@ -373,6 +372,100 @@
           </div>
           <h3 class="audience-card__title">Developers & Analysts</h3>
           <p class="audience-card__text">Extract structured product data for integrations, market research, or building custom e-commerce tools and dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING SECTION ========== -->
+  <section class="section" id="pricing" aria-labelledby="pricing-title" style="border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">Pricing</span>
+        <h2 class="section__title" id="pricing-title">Simple, <span class="text-gradient">Transparent Plans</span></h2>
+        <p class="section__description">Choose the plan that fits your business needs. Upgrade or cancel anytime.</p>
+        
+        <!-- Toggle Switch -->
+        <div class="pricing-toggle-container">
+          <span class="toggle-label toggle-label--active" id="label-monthly">Monthly</span>
+          <button class="pricing-toggle-switch" id="pricing-switch" role="switch" aria-checked="false" aria-label="Toggle pricing plan">
+            <span class="pricing-toggle-knob"></span>
+          </button>
+          <span class="toggle-label" id="label-yearly">Yearly <span class="badge-discount">17% OFF</span></span>
+        </div>
+      </div>
+
+      <div class="pricing__grid">
+        <!-- Free Plan -->
+        <div class="pricing-card reveal" id="pricing-free">
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__title">Core Plan</h3>
+            <p class="pricing-card__desc">Ideal for occasional exports and basic research.</p>
+            <div class="pricing-card__price">
+              <span class="price-symbol">$</span><span class="price-value">0</span>
+              <span class="price-duration">/ forever</span>
+            </div>
+          </div>
+          <div class="pricing-card__body">
+            <ul class="pricing-card__features">
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                1-Click Shopify product exporting
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Export to CSV format
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Basic data filtering & sorting
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                100% local browser processing
+              </li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="btn btn--secondary pricing-card__btn" target="_blank" rel="noopener noreferrer">Install Free</a>
+          </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-card pricing-card--featured reveal" id="pricing-pro">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__title">Pro Plan</h3>
+            <p class="pricing-card__desc">Unlock the full power of competitor research and bulk data actions.</p>
+            <div class="pricing-card__price">
+              <span class="price-symbol">$</span><span class="price-value" id="plan-price">3.99</span>
+              <span class="price-duration" id="plan-duration">/ month</span>
+            </div>
+            <div class="price-billing-note" id="billing-note">Billed monthly, cancel anytime.</div>
+          </div>
+          <div class="pricing-card__body">
+            <ul class="pricing-card__features">
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <strong>Unlimited</strong> product exports
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Export to CSV, Excel, and JSON
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Advanced variant parsing (SKUs, Stock)
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Bulk product image downloader
+              </li>
+              <li>
+                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Priority email support
+              </li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc" class="btn btn--primary pricing-card__btn" target="_blank" rel="noopener noreferrer">Upgrade to Pro</a>
+          </div>
         </div>
       </div>
     </div>
@@ -632,7 +725,40 @@
         }
       });
     });
+    // Pricing toggle switch
+    const pricingSwitch = document.getElementById('pricing-switch');
+    const planPrice = document.getElementById('plan-price');
+    const planDuration = document.getElementById('plan-duration');
+    const billingNote = document.getElementById('billing-note');
+    const labelMonthly = document.getElementById('label-monthly');
+    const labelYearly = document.getElementById('label-yearly');
 
+    if (pricingSwitch) {
+      const togglePricing = (toYearly) => {
+        pricingSwitch.setAttribute('aria-checked', toYearly);
+        if (toYearly) {
+          planPrice.textContent = '3.32';
+          planDuration.textContent = '/ month';
+          billingNote.textContent = 'Billed annually ($39.90/year). Save 17%!';
+          labelYearly.classList.add('toggle-label--active');
+          labelMonthly.classList.remove('toggle-label--active');
+        } else {
+          planPrice.textContent = '3.99';
+          planDuration.textContent = '/ month';
+          billingNote.textContent = 'Billed monthly, cancel anytime.';
+          labelMonthly.classList.add('toggle-label--active');
+          labelYearly.classList.remove('toggle-label--active');
+        }
+      };
+
+      pricingSwitch.addEventListener('click', () => {
+        const isYearly = pricingSwitch.getAttribute('aria-checked') === 'true';
+        togglePricing(!isYearly);
+      });
+
+      labelMonthly.addEventListener('click', () => togglePricing(false));
+      labelYearly.addEventListener('click', () => togglePricing(true));
+    }
     // Scroll reveal animations
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
