@@ -303,6 +303,8 @@ body::before {
   border-radius: var(--radius-full);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   -webkit-text-fill-color: #fff;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav__cta:hover {
@@ -1340,12 +1342,7 @@ body::before {
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --space-4xl: 3rem;
-    --space-5xl: 4rem;
-  }
-
+@media (max-width: 992px) {
   /* Solid background on header when mobile menu is open */
   .nav.nav-open,
   .nav:has(.nav__links.open) {
@@ -1374,9 +1371,15 @@ body::before {
     background: #06060f !important;
   }
 
-
   .nav__toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-4xl: 3rem;
+    --space-5xl: 4rem;
   }
 
   .hero__title {
