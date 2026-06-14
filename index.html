@@ -46,13 +46,12 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Exnta Shopify Product Exporter",
+    "name": "Exnta Shopify Scraper & Product Exporter",
     "alternateName": "Shopify Scraper & Product Exporter",
     "description": "Export products from any Shopify store to CSV, Excel (.xlsx), or JSON in one click. A Chrome browser extension for dropshippers, Shopify merchants, and e-commerce developers. All data processing runs 100% locally in the browser sandbox.",
     "applicationCategory": "BusinessApplication",
     "applicationSubCategory": "E-Commerce Tools",
-    "operatingSystem": "Google Chrome, Microsoft Edge, Brave Browser, Opera",
-    "softwareVersion": "1.4.0",
+    "softwareVersion": "1.0.3",
     "url": "https://shopify-exporter.exnta.com/",
     "downloadUrl": "https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc",
     "installUrl": "https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc",
@@ -64,8 +63,8 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "Core Plan (Free)",
-        "price": "0",
+        "name": "Core Plan",
+        "price": "0.00",
         "priceCurrency": "USD",
         "description": "Free tier: 1-click scraping, CSV export, basic filtering. Limited to 100 products per session.",
         "availability": "https://schema.org/InStock"
@@ -115,105 +114,6 @@
   }
   </script>
 
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Exnta",
-    "url": "https://shopify-exporter.exnta.com",
-    "logo": "https://shopify-exporter.exnta.com/assets/images/icon128.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "support@exnta.com",
-      "contactType": "Customer Support"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD: FAQPage Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does the Exnta Shopify Product Exporter work on all Shopify stores?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Exnta works on any storefront built with Shopify, including custom domains, headless storefronts, and heavily customized themes. The extension detects Shopify stores automatically by checking for the window.Shopify JavaScript object and the /products.json endpoint."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my data safe when using the Exnta scraper extension?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. All data processing happens 100% locally in your browser's content script sandbox. No product data, competitor URLs, or research patterns are ever sent to external servers. The extension does not have outbound network permissions, does not set cookies, and does not require login credentials."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What export formats does Exnta support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Exnta supports three export formats: CSV (UTF-8 encoded, free tier), Excel .xlsx with styled headers and dedicated variant worksheets (Pro), and JSON with the original nested Shopify object structure (Pro). CSV exports use Shopify-standard column headers for zero-configuration re-imports."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will the store owner know I am scraping their products?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Exnta operates locally within your browser and reads publicly available product catalog data from the /products.json endpoint. Because it uses your residential IP address and behaves like a normal browsing session, it is indistinguishable from regular site traffic. You can also enable Slow Mode to add natural delays between requests."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is the Exnta Shopify Product Exporter free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Exnta offers a free Core plan that includes 1-click product scraping, CSV export, and basic data filtering, limited to 100 products per session. The Pro plan ($3.99/month or $3.32/month billed annually) unlocks unlimited exports, Excel and JSON formats, bulk image downloading, advanced analytics, duplicate finder, and priority support."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- BreadcrumbList Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://shopify-exporter.exnta.com/"
-      }
-    ]
-  }
-  </script>
-
-  <!-- WebSite Schema with SearchAction -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Shopify Product Exporter",
-    "url": "https://shopify-exporter.exnta.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://shopify-exporter.exnta.com/blog/?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 </head>
 
 <body>
@@ -740,7 +640,8 @@
           </button>
           <div class="faq-item__answer" id="faq-6-answer" role="region" aria-labelledby="faq-6-btn">
             <div class="faq-item__answer-inner">
-              Yes, the core features are free to use (up to 100 products per export) — including Shopify detection, product scraping, CSV export,
+              Yes, the core features are free to use (up to 100 products per export) — including Shopify detection,
+              product scraping, CSV export,
               and basic filtering. There's also a Pro tier that unlocks unlimited exports, Excel exports, advanced
               analytics, duplicate finder, and priority support.
             </div>

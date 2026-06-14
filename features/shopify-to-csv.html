@@ -37,25 +37,31 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: BreadcrumbList Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Shopify Product Exporter - CSV Tool",
-    "description": "Export products from any Shopify store to CSV format in one click. Free tier available and secure.",
-    "applicationCategory": "BrowserApplication",
-    "operatingSystem": "Chrome, Edge, Brave, Opera",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "120"
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shopify-exporter.exnta.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Features",
+        "item": "https://shopify-exporter.exnta.com/#features"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Export Shopify to CSV Free",
+        "item": "https://shopify-exporter.exnta.com/features/shopify-to-csv.html"
+      }
+    ]
   }
   </script>
 </head>
