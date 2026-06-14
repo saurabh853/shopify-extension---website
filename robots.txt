@@ -3,10 +3,6 @@
 
 User-agent: *
 Allow: /
+Disallow: /scratch/
 
 Sitemap: https://shopify-exporter.exnta.com/sitemap.xml
-
-# Disallow crawling of asset files
-User-agent: *
-Disallow: /assets/css/
-Disallow: /assets/images/

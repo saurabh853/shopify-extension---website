@@ -137,7 +137,10 @@
         <h1 class="blog-post__title">How to Fix Shopify Product CSV Import Errors</h1>
 
         <!-- Hero Image -->
-        <img src="../assets/images/blog-data-export.png" alt="Troubleshooting Shopify CSV Import Errors" class="blog-post__hero-img" width="780" height="410" loading="eager">
+        <picture>
+          <source srcset="../assets/images/blog-data-export.webp" type="image/webp">
+          <img src="../assets/images/blog-data-export.png" alt="Troubleshooting Shopify CSV Import Errors" class="blog-post__hero-img" width="780" height="410" loading="eager">
+        </picture>
 
         <!-- Content -->
         <div class="blog-post__content">
@@ -155,7 +158,7 @@
           <p>Shopify matches data based on the exact spelling of the column titles in the first row. If a column header is misspelled or missing, the import will fail.</p>
           <ul>
             <li><strong>The Fix:</strong> Ensure your column headers match Shopify's default template. Key headers include: *Handle*, *Title*, *Body (HTML)*, *Vendor*, *Type*, *Tags*, *Published*, *Option1 Name*, *Option1 Value*, *Variant SKU*, *Variant Grams*, *Variant Inventory Tracker*, *Variant Inventory Qty*, *Variant Price*, *Variant Compare At Price*, and *Image Src*.</li>
-            <li>If you are using **Shopify Product Exporter**, the generated CSV files are pre-formatted to match Shopify's official header schema perfectly, eliminating this issue.</li>
+            <li>If you are using <a href="https://shopify-exporter.exnta.com/"><strong>Shopify Product Exporter</strong></a>, the generated CSV files are pre-formatted to match Shopify's official header schema perfectly, eliminating this issue.</li>
           </ul>
 
           <h2>3. Error: "UTF-8 encoding error"</h2>

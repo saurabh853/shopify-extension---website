@@ -137,7 +137,10 @@
         <h1 class="blog-post__title">Why Local Browser Scraping is Safer Than Cloud-Based Scrapers</h1>
 
         <!-- Hero Image -->
-        <img src="../assets/images/blog-security.png" alt="Local Browser Scraping vs Cloud Scrapers" class="blog-post__hero-img" width="780" height="410" loading="eager">
+        <picture>
+          <source srcset="../assets/images/blog-security.webp" type="image/webp">
+          <img src="../assets/images/blog-security.png" alt="Local Browser Scraping vs Cloud Scrapers" class="blog-post__hero-img" width="780" height="410" loading="eager">
+        </picture>
 
         <!-- Content -->
         <div class="blog-post__content">
@@ -147,7 +150,7 @@
 
           <h2>1. Maximum Data Privacy & Security</h2>
           <p>When you use a cloud-hosted scraping service, you have to submit target URLs to their servers. This means the cloud company knows exactly what competitors you are research, what products you are targeting, and what niches you are exploring. If their database is leaked, or if they sell aggregate research data, your proprietary product research is exposed.</p>
-          <p>Local browser extensions like **Shopify Product Exporter** process all data locally. The database queries happen entirely inside your browser's sandboxed environment. No product URLs, pricing details, or catalog metadata are ever sent to remote servers, keeping your competitive intelligence 100% private.</p>
+          <p>Local browser extensions like <a href="https://shopify-exporter.exnta.com/"><strong>Shopify Product Exporter</strong></a> process all data locally. The database queries happen entirely inside your browser's sandboxed environment. No product URLs, pricing details, or catalog metadata are ever sent to remote servers, keeping your competitive intelligence 100% private.</p>
 
           <h2>2. Bypassing Cloud IP Blocks & Firewalls</h2>
           <p>Many e-commerce stores use security firewalls (like Cloudflare or Akamai) to block scraping bots. These firewalls maintain extensive blacklists of IP addresses associated with cloud data centers (like Amazon Web Services or DigitalOcean). When a cloud scraper tries to access a store, it is instantly blocked by a CAPTCHA or a "403 Forbidden" screen.</p>
