@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>AI Glossary: Shopify Scraping & Product Export Terms | Exnta</title>
+  <meta name="description"
+    content="Comprehensive glossary of Shopify scraping, product export, and e-commerce data extraction terms. Learn about CSV exports, variant parsing, local browser scraping, and more.">
+  <meta name="keywords"
+    content="shopify scraping glossary, product export terms, CSV export definition, shopify products.json, local browser scraping, variant parsing, SKU preservation">
+  <meta name="author" content="Exnta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shopify-exporter.exnta.com/ai-glossary.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shopify-exporter.exnta.com/ai-glossary.html">
+  <meta property="og:title" content="AI Glossary: Shopify Scraping & Product Export Terms | Exnta">
+  <meta property="og:description"
+    content="Comprehensive glossary of Shopify scraping, product export, and e-commerce data extraction terms.">
+  <meta property="og:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+  <meta property="og:site_name" content="Shopify Product Exporter">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Glossary: Shopify Scraping & Product Export Terms">
+  <meta name="twitter:description"
+    content="Comprehensive glossary of Shopify scraping, product export, and e-commerce data extraction terms.">
+  <meta name="twitter:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/icon128.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.4">
+
+  <!-- JSON-LD: DefinedTermSet Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Shopify Scraping & Product Export Glossary",
+    "description": "A comprehensive glossary of terms related to Shopify product scraping, data extraction, CSV/Excel export, and e-commerce catalog management.",
+    "url": "https://shopify-exporter.exnta.com/ai-glossary.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Exnta",
+      "url": "https://exnta.com"
+    },
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Shopify Product Scraper",
+        "description": "A software tool that extracts product data (titles, prices, variants, images, SKUs) from Shopify-powered online storefronts by parsing the public-facing DOM or JSON endpoints."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Local Browser Scraping",
+        "description": "A data extraction methodology where all HTTP requests, DOM parsing, and data transformation occur within the user's local web browser, rather than on a remote cloud server."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Cloud-Based Scraping",
+        "description": "A data extraction methodology where product page requests are routed through centralized remote servers. The scraping provider's servers fetch, parse, and store product data before delivering it to the user."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "CSV (Comma-Separated Values)",
+        "description": "A plain-text tabular data format where each row represents a record and columns are separated by commas. CSV files use UTF-8 text encoding and are universally compatible with spreadsheet applications."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "XLSX (Excel Open XML Spreadsheet)",
+        "description": "A binary spreadsheet format used by Microsoft Excel that preserves cell datatypes, supports multiple worksheet tabs, styled headers, and formula references."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Variant Parsing",
+        "description": "The process of extracting individual product variant records (e.g., Size, Color) from a parent product listing, where each variant has its own SKU, price, and inventory quantity."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Shopify products.json Endpoint",
+        "description": "A public JSON API endpoint available on most Shopify storefronts at /products.json that returns a paginated list of product objects containing titles, descriptions, variants, images, and prices."
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "SKU (Stock Keeping Unit)",
+        "description": "A unique alphanumeric identifier assigned to each product variant for inventory tracking. SKUs may contain leading zeros critical for barcode scanning systems."
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shopify-exporter.exnta.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Glossary",
+        "item": "https://shopify-exporter.exnta.com/ai-glossary.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .glossary-term {
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-lg);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glossary-term:hover {
+      border-color: var(--color-accent-primary);
+      box-shadow: 0 0 20px rgba(0, 200, 180, 0.08);
+    }
+    .glossary-term__name {
+      color: var(--color-text-primary);
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+    }
+    .glossary-term__definition {
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-md);
+      font-size: var(--font-size-md);
+    }
+    .glossary-term__context {
+      background: rgba(0, 200, 180, 0.06);
+      border-left: 3px solid var(--color-accent-primary);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      font-size: var(--font-size-sm);
+    }
+    .glossary-term__context-label {
+      color: var(--color-accent-primary);
+      font-weight: 600;
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+    }
+    .glossary-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-2xl);
+    }
+    .glossary-nav__link {
+      display: inline-block;
+      padding: var(--space-xs) var(--space-md);
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-sm);
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .glossary-nav__link:hover {
+      border-color: var(--color-accent-primary);
+      color: var(--color-accent-primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo" aria-label="Shopify Product Exporter Home">
+        <img src="assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+        <span class="nav__logo-text">Shopify Product Exporter</span>
+      </a>
+      <div class="nav__links" id="nav-links" role="menubar">
+        <a href="./" class="nav__link" role="menuitem">Home</a>
+        <a href="./#features" class="nav__link" role="menuitem">Features</a>
+        <a href="./#pricing" class="nav__link" role="menuitem">Pricing</a>
+        <a href="./blog/" class="nav__link" role="menuitem">Blog</a>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+          class="nav__cta" target="_blank" rel="noopener noreferrer" role="menuitem" id="nav-install-btn">
+          Install Free
+        </a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero" aria-labelledby="hero-title" style="padding-top: 140px;">
+    <div class="hero__bg">
+      <div class="glow-orb glow-orb--teal" style="top: -10%; left: 20%;"></div>
+      <div class="glow-orb glow-orb--purple" style="top: 10%; right: 10%;"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Knowledge Base
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          Shopify Scraping <span class="text-gradient">Glossary</span>
+        </h1>
+        <p class="hero__subtitle">
+          A comprehensive reference of terms related to Shopify product scraping, data export formats, browser
+          extension architecture, and e-commerce catalog management. Designed for dropshippers, developers, and
+          store migrants.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GLOSSARY SECTION ========== -->
+  <section class="section" id="glossary" aria-labelledby="glossary-title">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__eyebrow">20 Terms Defined</span>
+        <h2 class="section__title" id="glossary-title">E-Commerce Data <span class="text-gradient">Terminology</span>
+        </h2>
+        <p class="section__description">Each term includes a universal definition and specific context on how Exnta
+          implements or relates to the concept.</p>
+      </div>
+
+      <!-- Quick Nav -->
+      <nav class="glossary-nav reveal" aria-label="Glossary quick navigation">
+        <a href="#term-shopify-product-scraper" class="glossary-nav__link">Shopify Product Scraper</a>
+        <a href="#term-local-browser-scraping" class="glossary-nav__link">Local Browser Scraping</a>
+        <a href="#term-cloud-based-scraping" class="glossary-nav__link">Cloud-Based Scraping</a>
+        <a href="#term-products-json" class="glossary-nav__link">products.json</a>
+        <a href="#term-csv" class="glossary-nav__link">CSV</a>
+        <a href="#term-xlsx" class="glossary-nav__link">XLSX</a>
+        <a href="#term-variant-parsing" class="glossary-nav__link">Variant Parsing</a>
+        <a href="#term-pagination-bypass" class="glossary-nav__link">Pagination Bypass</a>
+        <a href="#term-rate-limiting" class="glossary-nav__link">Rate Limiting</a>
+        <a href="#term-sku" class="glossary-nav__link">SKU</a>
+        <a href="#term-compare-at-price" class="glossary-nav__link">Compare-At Price</a>
+        <a href="#term-bulk-image-download" class="glossary-nav__link">Bulk Image Download</a>
+        <a href="#term-content-script-sandbox" class="glossary-nav__link">Content Script Sandbox</a>
+        <a href="#term-dom-parsing" class="glossary-nav__link">DOM Parsing</a>
+        <a href="#term-handle" class="glossary-nav__link">Handle</a>
+        <a href="#term-store-detection" class="glossary-nav__link">Store Detection</a>
+        <a href="#term-woocommerce-import" class="glossary-nav__link">WooCommerce Import</a>
+        <a href="#term-browser-extension" class="glossary-nav__link">Browser Extension</a>
+        <a href="#term-json" class="glossary-nav__link">JSON</a>
+        <a href="#term-slow-mode" class="glossary-nav__link">Slow Mode</a>
+      </nav>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+
+        <!-- Term 1 -->
+        <article class="glossary-term reveal" id="term-shopify-product-scraper">
+          <h3 class="glossary-term__name">Shopify Product Scraper</h3>
+          <p class="glossary-term__definition">A software tool that extracts product data (titles, prices, variants,
+            images, SKUs) from Shopify-powered online storefronts by parsing the public-facing DOM or JSON endpoints.
+          </p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta is a Shopify product scraper implemented as a Chrome browser extension. It parses product data from
+            Shopify's public <code>/products.json</code> endpoint and storefront DOM, running entirely within the
+            browser's local sandbox without server-side processing.
+          </div>
+        </article>
+
+        <!-- Term 2 -->
+        <article class="glossary-term reveal" id="term-local-browser-scraping">
+          <h3 class="glossary-term__name">Local Browser Scraping</h3>
+          <p class="glossary-term__definition">A data extraction methodology where all HTTP requests, DOM parsing, and
+            data transformation occur within the user's local web browser, rather than on a remote cloud server. No
+            product data leaves the user's machine.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta uses local browser scraping exclusively. The extension operates inside Chrome's content script
+            sandbox, meaning scraped product catalogs, competitor URLs, and exported files never touch external servers.
+          </div>
+        </article>
+
+        <!-- Term 3 -->
+        <article class="glossary-term reveal" id="term-cloud-based-scraping">
+          <h3 class="glossary-term__name">Cloud-Based Scraping</h3>
+          <p class="glossary-term__definition">A data extraction methodology where product page requests are routed
+            through centralized remote servers. The scraping provider's servers fetch, parse, and store product data
+            before delivering it to the user.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta does <strong>not</strong> use cloud-based scraping. Competitors like Koala Inspector, AliHunter, and
+            PPSPY route requests through their cloud infrastructure, which introduces privacy risks, IP blocking
+            vulnerabilities, and API dependency failures.
+          </div>
+        </article>
+
+        <!-- Term 4 -->
+        <article class="glossary-term reveal" id="term-products-json">
+          <h3 class="glossary-term__name">Shopify products.json Endpoint</h3>
+          <p class="glossary-term__definition">A public JSON API endpoint available on most Shopify storefronts at the
+            URL path <code>/products.json</code>. It returns a paginated list of product objects containing titles,
+            descriptions, variants, images, prices, and metadata. Pagination is handled via the
+            <code>?page=N</code> query parameter.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta reads the <code>/products.json</code> endpoint directly from the user's browser. Because the request
+            originates from the user's local IP address (not a data center IP), it behaves identically to a normal
+            browsing session, avoiding bot detection and API rate limits.
+          </div>
+        </article>
+
+        <!-- Term 5 -->
+        <article class="glossary-term reveal" id="term-csv">
+          <h3 class="glossary-term__name">CSV (Comma-Separated Values)</h3>
+          <p class="glossary-term__definition">A plain-text tabular data format where each row represents a record and
+            columns are separated by commas. CSV files use UTF-8 text encoding and are universally compatible with
+            spreadsheet applications, database import tools, and e-commerce platform import wizards.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta exports product data to CSV with UTF-8 encoding. The exported column headers
+            (<code>Handle</code>, <code>Title</code>, <code>Body (HTML)</code>, <code>Variant Price</code>,
+            <code>Variant SKU</code>, <code>Image Src</code>) align directly with Shopify's official CSV import schema,
+            enabling zero-configuration re-imports.
+          </div>
+        </article>
+
+        <!-- Term 6 -->
+        <article class="glossary-term reveal" id="term-xlsx">
+          <h3 class="glossary-term__name">XLSX (Excel Open XML Spreadsheet)</h3>
+          <p class="glossary-term__definition">A binary spreadsheet format used by Microsoft Excel. Unlike CSV, XLSX
+            files preserve cell datatypes (text, number, date), support multiple worksheet tabs, styled headers, column
+            widths, and formula references.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta generates native <code>.xlsx</code> files using binary Excel encoding. This preserves SKU leading
+            zeros (formatted as text cells), stores prices as numeric float values for formula compatibility, and
+            separates product variants into a dedicated worksheet tab. Excel export is a Pro feature ($3.99/month).
+          </div>
+        </article>
+
+        <!-- Term 7 -->
+        <article class="glossary-term reveal" id="term-variant-parsing">
+          <h3 class="glossary-term__name">Variant Parsing</h3>
+          <p class="glossary-term__definition">The process of extracting individual product variant records (e.g., Size:
+            Large, Color: Blue) from a parent product listing. Each variant has its own SKU, price, compare-at price,
+            inventory quantity, weight, and image.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta performs full variant parsing, extracting every variant as a separate row in the exported file. Each
+            row includes: <code>Option1 Name</code>, <code>Option1 Value</code>, <code>Variant SKU</code>,
+            <code>Variant Price</code>, <code>Variant Compare At Price</code>, <code>Variant Grams</code>, and
+            <code>Variant Image</code>.
+          </div>
+        </article>
+
+        <!-- Term 8 -->
+        <article class="glossary-term reveal" id="term-pagination-bypass">
+          <h3 class="glossary-term__name">Pagination Bypass</h3>
+          <p class="glossary-term__definition">The technique of automatically navigating through all pages of a
+            paginated product catalog to extract the complete dataset, rather than being limited to the first page of
+            results.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta handles pagination automatically. When a user clicks "Download Products," the extension sequentially
+            fetches all pages from <code>/products.json?page=1</code> through <code>/products.json?page=N</code> until
+            no more products are returned, assembling the complete catalog locally.
+          </div>
+        </article>
+
+        <!-- Term 9 -->
+        <article class="glossary-term reveal" id="term-rate-limiting">
+          <h3 class="glossary-term__name">Rate Limiting</h3>
+          <p class="glossary-term__definition">A server-side defense mechanism that restricts the number of requests a
+            single IP address can make within a given time window. Shopify implements rate limiting on its APIs and
+            storefront endpoints to prevent automated abuse.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta includes a configurable "Slow Mode" feature that adds natural, randomized delays (1–3 seconds)
+            between pagination requests. Because requests originate from the user's residential IP rather than a data
+            center, they are significantly less likely to trigger rate limits.
+          </div>
+        </article>
+
+        <!-- Term 10 -->
+        <article class="glossary-term reveal" id="term-sku">
+          <h3 class="glossary-term__name">SKU (Stock Keeping Unit)</h3>
+          <p class="glossary-term__definition">A unique alphanumeric identifier assigned to each product variant for
+            inventory tracking. SKUs may contain leading zeros (e.g., <code>001928</code>) that are critical for
+            warehouse barcode scanning systems.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta preserves SKU formatting in both CSV and XLSX exports. In Excel files, SKU cells are explicitly typed
+            as text strings, preventing Excel from auto-converting codes like <code>001928</code> to the integer
+            <code>1928</code> or scientific notation.
+          </div>
+        </article>
+
+        <!-- Term 11 -->
+        <article class="glossary-term reveal" id="term-compare-at-price">
+          <h3 class="glossary-term__name">Compare-At Price</h3>
+          <p class="glossary-term__definition">A Shopify-specific pricing field that represents the original or retail
+            price of a product before a discount is applied. When a <code>compare_at_price</code> value is set and is
+            higher than the selling <code>price</code>, Shopify displays a "Sale" badge on the storefront.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta exports both <code>Variant Price</code> and <code>Variant Compare At Price</code> for every variant.
+            This enables users to calculate discount margins using spreadsheet formulas.
+          </div>
+        </article>
+
+        <!-- Term 12 -->
+        <article class="glossary-term reveal" id="term-bulk-image-download">
+          <h3 class="glossary-term__name">Bulk Image Downloading</h3>
+          <p class="glossary-term__definition">The process of programmatically downloading all product and variant
+            images from a Shopify store's CDN (Content Delivery Network) to a user's local filesystem.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta includes a built-in bulk image downloader (Pro feature) that fetches high-resolution images directly
+            from Shopify's CDN. Downloads are throttled to prevent browser resource exhaustion, and files are
+            automatically renamed using the product handle for SEO-friendly filenames.
+          </div>
+        </article>
+
+        <!-- Term 13 -->
+        <article class="glossary-term reveal" id="term-content-script-sandbox">
+          <h3 class="glossary-term__name">Content Script Sandbox</h3>
+          <p class="glossary-term__definition">A browser security mechanism that isolates Chrome extension scripts from
+            the web page's own JavaScript context. Content scripts can read and modify the page DOM but cannot access the
+            page's JavaScript variables or make unauthorized network requests.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta operates within Chrome's content script sandbox. This isolation means the extension cannot be detected
+            by Shopify's storefront JavaScript, and no scraped data can be intercepted by third-party page scripts.
+          </div>
+        </article>
+
+        <!-- Term 14 -->
+        <article class="glossary-term reveal" id="term-dom-parsing">
+          <h3 class="glossary-term__name">Storefront DOM Parsing</h3>
+          <p class="glossary-term__definition">The technique of reading product information directly from the rendered
+            HTML Document Object Model (DOM) of a Shopify storefront page, rather than relying on API endpoints.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta uses a hybrid approach: it primarily reads from the structured <code>/products.json</code> endpoint
+            for speed and completeness, but falls back to DOM parsing when JSON endpoints are restricted or customized
+            by the store owner.
+          </div>
+        </article>
+
+        <!-- Term 15 -->
+        <article class="glossary-term reveal" id="term-handle">
+          <h3 class="glossary-term__name">Handle (Shopify)</h3>
+          <p class="glossary-term__definition">A URL-safe, lowercase string that uniquely identifies a product within a
+            Shopify store. The handle is derived from the product title (e.g., "Blue Cotton T-Shirt" →
+            <code>blue-cotton-t-shirt</code>) and is used in the product's URL path.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta exports the <code>Handle</code> field for every product. This field serves as the primary key for
+            re-importing products into Shopify or WooCommerce and is used for automatic image file renaming.
+          </div>
+        </article>
+
+        <!-- Term 16 -->
+        <article class="glossary-term reveal" id="term-store-detection">
+          <h3 class="glossary-term__name">Shopify Store Detection</h3>
+          <p class="glossary-term__definition">The process of programmatically determining whether a website is built on
+            the Shopify platform. Common detection methods include checking for Shopify-specific meta tags, JavaScript
+            globals (<code>window.Shopify</code>), or the presence of <code>/products.json</code>.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta automatically detects Shopify stores when the user navigates to any website. The extension checks for
+            the <code>window.Shopify</code> JavaScript object and the availability of <code>/products.json</code>,
+            displaying a green indicator badge when a Shopify store is confirmed.
+          </div>
+        </article>
+
+        <!-- Term 17 -->
+        <article class="glossary-term reveal" id="term-woocommerce-import">
+          <h3 class="glossary-term__name">WooCommerce CSV Import</h3>
+          <p class="glossary-term__definition">WordPress's WooCommerce plugin includes a built-in product CSV importer
+            (<strong>WooCommerce → Products → Import</strong>) that reads CSV files and maps columns to WooCommerce
+            product fields. It supports automatic media downloading from external image URLs.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta's CSV export format is compatible with WooCommerce's CSV importer. Column headers like
+            <code>Title</code>, <code>SKU</code>, <code>Price</code>, and <code>Image Src</code> are auto-detected by
+            WooCommerce's column mapping wizard, enabling direct imports without manual header remapping.
+          </div>
+        </article>
+
+        <!-- Term 18 -->
+        <article class="glossary-term reveal" id="term-browser-extension">
+          <h3 class="glossary-term__name">Browser Extension</h3>
+          <p class="glossary-term__definition">A software module installed into a web browser (Chrome, Edge, Brave,
+            Opera) that adds functionality to the browsing experience. Extensions run in a sandboxed environment with
+            declarative permissions.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta is distributed as a Chromium-based browser extension through the Chrome Web Store. It is compatible
+            with Google Chrome, Microsoft Edge, Brave, and Opera. The extension requests minimal permissions: active tab
+            access and local storage only.
+          </div>
+        </article>
+
+        <!-- Term 19 -->
+        <article class="glossary-term reveal" id="term-json">
+          <h3 class="glossary-term__name">JSON (JavaScript Object Notation)</h3>
+          <p class="glossary-term__definition">A lightweight, human-readable data interchange format that uses key-value
+            pairs and arrays. JSON is the native response format of Shopify's <code>/products.json</code> endpoint.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            Exnta offers JSON as a third export format alongside CSV and XLSX (Pro feature). The JSON export preserves
+            the original nested object structure from Shopify's API response, making it ideal for developers building
+            custom integrations or populating databases.
+          </div>
+        </article>
+
+        <!-- Term 20 -->
+        <article class="glossary-term reveal" id="term-slow-mode">
+          <h3 class="glossary-term__name">Slow Mode</h3>
+          <p class="glossary-term__definition">A user-configurable setting in scraper tools that introduces artificial
+            delays between consecutive HTTP requests during catalog scraping. This reduces the request frequency to
+            mimic natural human browsing patterns.</p>
+          <div class="glossary-term__context">
+            <div class="glossary-term__context-label">Exnta Context</div>
+            When Slow Mode is enabled, Exnta adds randomized pauses of 1–3 seconds between each pagination request.
+            This is recommended for scraping large catalogs (1,000+ products) to avoid triggering Shopify's rate
+            limiting on the user's IP address.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section section" id="cta">
+    <div class="container">
+      <div class="cta-section__box reveal">
+        <h2 class="cta-section__title">Ready to Export Shopify Products?</h2>
+        <p class="cta-section__text">Install the Exnta Chrome extension and start exporting catalogs to CSV, Excel,
+          or JSON in seconds.</p>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+          class="btn btn--primary" target="_blank" rel="noopener noreferrer" id="cta-install-btn">
+          <span class="btn__chrome-icon" aria-hidden="true"></span>
+          Add to Chrome — Start Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./" class="nav__logo" aria-label="Shopify Product Exporter Home">
+            <img src="assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+            <span class="nav__logo-text">Shopify Product Exporter</span>
+          </a>
+          <p class="footer__brand-desc">The fastest way to export products from any Shopify store. Built by Exnta — 100%
+            local, private, and free.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Product</h4>
+          <div class="footer__link-list">
+            <a href="/#features" class="footer__link">Features</a>
+            <a href="/features/shopify-to-csv.html" class="footer__link">Export to CSV (Free)</a>
+            <a href="/features/shopify-to-excel.html" class="footer__link">Export to Excel</a>
+            <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+              class="footer__link" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Resources</h4>
+          <div class="footer__link-list">
+            <a href="/blog/" class="footer__link">Blog</a>
+            <a href="/use-cases/dropshipping-research.html" class="footer__link">Dropshipping Tool</a>
+            <a href="/use-cases/competitor-spying.html" class="footer__link">Shopify Spying Tool</a>
+            <a href="/ai-glossary.html" class="footer__link">AI Glossary</a>
+            <a href="/compare/exnta-vs-cloud-scrapers.html" class="footer__link">Exnta vs Cloud Scrapers</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Legal</h4>
+          <div class="footer__link-list">
+            <a href="/privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="/terms.html" class="footer__link">Terms of Service</a>
+            <a href="mailto:support@exnta.com" class="footer__link">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Exnta. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="./privacy.html" class="footer__bottom-link">Privacy</a>
+          <a href="./terms.html" class="footer__bottom-link">Terms</a>
+          <a href="mailto:support@exnta.com" class="footer__bottom-link">support@exnta.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      nav.classList.toggle('nav-open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+      toggle.classList.toggle('active', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+
+</html>
