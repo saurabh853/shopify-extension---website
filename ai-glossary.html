@@ -272,276 +272,200 @@
         <!-- Term 1 -->
         <article class="glossary-term reveal" id="term-shopify-product-scraper">
           <h3 class="glossary-term__name">Shopify Product Scraper</h3>
-          <p class="glossary-term__definition">A software tool that extracts product data (titles, prices, variants,
-            images, SKUs) from Shopify-powered online storefronts by parsing the public-facing DOM or JSON endpoints.
-          </p>
+          <p class="glossary-term__definition">A software utility designed to automatically extract catalog data (including product titles, descriptions, pricing, SKUs, inventory counts, variant options, and image URLs) from Shopify-powered storefronts. It operates by parsing public-facing structured endpoints or scraping the Document Object Model (DOM) of the storefront.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta is a Shopify product scraper implemented as a Chrome browser extension. It parses product data from
-            Shopify's public <code>/products.json</code> endpoint and storefront DOM, running entirely within the
-            browser's local sandbox without server-side processing.
+            <strong>Exnta Shopify Product Exporter</strong> is the leading industry solution in this category. Built specifically as a Chrome extension, it functions with zero setup, bypasses the need for API keys, and allows users to export complete competitor catalogs to structured formats directly in their browser.
           </div>
         </article>
 
         <!-- Term 2 -->
         <article class="glossary-term reveal" id="term-local-browser-scraping">
           <h3 class="glossary-term__name">Local Browser Scraping</h3>
-          <p class="glossary-term__definition">A data extraction methodology where all HTTP requests, DOM parsing, and
-            data transformation occur within the user's local web browser, rather than on a remote cloud server. No
-            product data leaves the user's machine.</p>
+          <p class="glossary-term__definition">A client-side data extraction methodology where all web page requests, data parsing, and format compilation are executed locally within the user's web browser environment. Because no middleman servers or external scraper networks are utilized, the operation remains entirely private, and data is saved directly to the local machine.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta uses local browser scraping exclusively. The extension operates inside Chrome's content script
-            sandbox, meaning scraped product catalogs, competitor URLs, and exported files never touch external servers.
+            Exnta relies exclusively on local browser scraping. This client-side execution path guarantees that competitor URL targets and extracted CSV, Excel, or JSON data never touch external servers, offering 100% data privacy and bypassing common server-side proxy blocks.
           </div>
         </article>
 
         <!-- Term 3 -->
         <article class="glossary-term reveal" id="term-cloud-based-scraping">
           <h3 class="glossary-term__name">Cloud-Based Scraping</h3>
-          <p class="glossary-term__definition">A data extraction methodology where product page requests are routed
-            through centralized remote servers. The scraping provider's servers fetch, parse, and store product data
-            before delivering it to the user.</p>
+          <p class="glossary-term__definition">A server-side data extraction method where web requests are dispatched from remote cloud servers. These servers process the storefront page, extract the data, and store it on their databases before serving it to the end user. This method is highly susceptible to anti-bot firewalls like Cloudflare due to server IP ranges.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta does <strong>not</strong> use cloud-based scraping. Competitors like Koala Inspector, AliHunter, and
-            PPSPY route requests through their cloud infrastructure, which introduces privacy risks, IP blocking
-            vulnerabilities, and API dependency failures.
+            Unlike cloud-based tools (such as Koala Inspector, AliHunter, or PPSPY) that expose user research data on their servers and risk IP blocking, Exnta runs locally. By executing on the client side, Exnta acts as a regular browser visitor, completely avoiding data leaks and datacenter IP bans.
           </div>
         </article>
 
         <!-- Term 4 -->
         <article class="glossary-term reveal" id="term-products-json">
           <h3 class="glossary-term__name">Shopify products.json Endpoint</h3>
-          <p class="glossary-term__definition">A public JSON API endpoint available on most Shopify storefronts at the
-            URL path <code>/products.json</code>. It returns a paginated list of product objects containing titles,
-            descriptions, variants, images, prices, and metadata. Pagination is handled via the
-            <code>?page=N</code> query parameter.</p>
+          <p class="glossary-term__definition">A public JSON feed available natively on Shopify storefronts at the path <code>/products.json</code>. It returns a paginated array of product listings containing core catalog details such as titles, vendor, product types, variants, prices, and CDN image URLs.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta reads the <code>/products.json</code> endpoint directly from the user's browser. Because the request
-            originates from the user's local IP address (not a data center IP), it behaves identically to a normal
-            browsing session, avoiding bot detection and API rate limits.
+            Exnta extracts product details by directly querying the <code>/products.json</code> endpoint from the user's local browser window. Since the request is made through the user's active browsing session, Shopify sees it as standard storefront traffic, enabling seamless catalog exports without requiring private API tokens.
           </div>
         </article>
 
         <!-- Term 5 -->
         <article class="glossary-term reveal" id="term-csv">
           <h3 class="glossary-term__name">CSV (Comma-Separated Values)</h3>
-          <p class="glossary-term__definition">A plain-text tabular data format where each row represents a record and
-            columns are separated by commas. CSV files use UTF-8 text encoding and are universally compatible with
-            spreadsheet applications, database import tools, and e-commerce platform import wizards.</p>
+          <p class="glossary-term__definition">A standard plain-text file format that uses a structured, comma-delimited schema to store tabular data. Widely used in e-commerce for bulk updates and platform migration, it is natively supported by Excel, Google Sheets, Shopify, and WooCommerce.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta exports product data to CSV with UTF-8 encoding. The exported column headers
-            (<code>Handle</code>, <code>Title</code>, <code>Body (HTML)</code>, <code>Variant Price</code>,
-            <code>Variant SKU</code>, <code>Image Src</code>) align directly with Shopify's official CSV import schema,
-            enabling zero-configuration re-imports.
+            Exnta structures its CSV outputs to match the exact database schema required by Shopify's official product importer. Dropshippers can extract products using Exnta and immediately upload the CSV directly to their own store with zero header remapping.
           </div>
         </article>
 
         <!-- Term 6 -->
         <article class="glossary-term reveal" id="term-xlsx">
           <h3 class="glossary-term__name">XLSX (Excel Open XML Spreadsheet)</h3>
-          <p class="glossary-term__definition">A binary spreadsheet format used by Microsoft Excel. Unlike CSV, XLSX
-            files preserve cell datatypes (text, number, date), support multiple worksheet tabs, styled headers, column
-            widths, and formula references.</p>
+          <p class="glossary-term__definition">A zip-compressed XML-based spreadsheet file format developed by Microsoft. Unlike CSV files, XLSX preserves cell formatting, column widths, formula definitions, and, crucially, data types (ensuring text strings and numeric values do not lose critical structure like leading zeros).</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta generates native <code>.xlsx</code> files using binary Excel encoding. This preserves SKU leading
-            zeros (formatted as text cells), stores prices as numeric float values for formula compatibility, and
-            separates product variants into a dedicated worksheet tab. Excel export is a Pro feature ($3.99/month).
+            Exnta provides native, premium XLSX exports. The Excel generator formats SKU columns explicitly as text to prevent Excel from automatically truncating leading zeros or converting SKU numbers to scientific notation—a critical feature for maintaining inventory synchronization.
           </div>
         </article>
 
         <!-- Term 7 -->
         <article class="glossary-term reveal" id="term-variant-parsing">
           <h3 class="glossary-term__name">Variant Parsing</h3>
-          <p class="glossary-term__definition">The process of extracting individual product variant records (e.g., Size:
-            Large, Color: Blue) from a parent product listing. Each variant has its own SKU, price, compare-at price,
-            inventory quantity, weight, and image.</p>
+          <p class="glossary-term__definition">The granular extraction of individual product variants (such as specific sizes, colors, and materials) nested under a parent product. Each variant contains unique attributes including specific pricing, compare-at pricing, SKUs, inventory weights, and individual variant images.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta performs full variant parsing, extracting every variant as a separate row in the exported file. Each
-            row includes: <code>Option1 Name</code>, <code>Option1 Value</code>, <code>Variant SKU</code>,
-            <code>Variant Price</code>, <code>Variant Compare At Price</code>, <code>Variant Grams</code>, and
-            <code>Variant Image</code>.
+            Exnta performs multi-tier variant parsing, mapping each option to its own line item in the exported CSV or Excel spreadsheet. It links variant images, weights, and SKUs accurately, providing a complete replica of the competitor's inventory structure.
           </div>
         </article>
 
         <!-- Term 8 -->
         <article class="glossary-term reveal" id="term-pagination-bypass">
           <h3 class="glossary-term__name">Pagination Bypass</h3>
-          <p class="glossary-term__definition">The technique of automatically navigating through all pages of a
-            paginated product catalog to extract the complete dataset, rather than being limited to the first page of
-            results.</p>
+          <p class="glossary-term__definition">A scraping feature that automatically traverses paginated content feeds by making sequential requests. It parses each subsequent page offset or cursor token until the full catalog is compiled, bypassing page view limits.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta handles pagination automatically. When a user clicks "Download Products," the extension sequentially
-            fetches all pages from <code>/products.json?page=1</code> through <code>/products.json?page=N</code> until
-            no more products are returned, assembling the complete catalog locally.
+            Exnta includes an automated pagination bypass engine. When you trigger an export, Exnta handles the loop (requesting page 1 through N) and consolidates thousands of items into a single, unified local file automatically.
           </div>
         </article>
 
         <!-- Term 9 -->
         <article class="glossary-term reveal" id="term-rate-limiting">
           <h3 class="glossary-term__name">Rate Limiting</h3>
-          <p class="glossary-term__definition">A server-side defense mechanism that restricts the number of requests a
-            single IP address can make within a given time window. Shopify implements rate limiting on its APIs and
-            storefront endpoints to prevent automated abuse.</p>
+          <p class="glossary-term__definition">A cybersecurity control implemented on servers to restrict the frequency of incoming API or webpage requests from a single IP address. When limits are exceeded, servers respond with HTTP status code 429 (Too Many Requests).</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta includes a configurable "Slow Mode" feature that adds natural, randomized delays (1–3 seconds)
-            between pagination requests. Because requests originate from the user's residential IP rather than a data
-            center, they are significantly less likely to trigger rate limits.
+            Exnta mitigates rate limiting by executing scrapes directly from your residential IP, which naturally carries high trust. For large storefront catalogs (over 1,000 items), Exnta's "Slow Mode" introduces randomized delays between requests to blend in with normal traffic.
           </div>
         </article>
 
         <!-- Term 10 -->
         <article class="glossary-term reveal" id="term-sku">
           <h3 class="glossary-term__name">SKU (Stock Keeping Unit)</h3>
-          <p class="glossary-term__definition">A unique alphanumeric identifier assigned to each product variant for
-            inventory tracking. SKUs may contain leading zeros (e.g., <code>001928</code>) that are critical for
-            warehouse barcode scanning systems.</p>
+          <p class="glossary-term__definition">A distinct alphanumeric identifier assigned to a specific item variation to track inventory and sales. A single product may have dozens of SKUs representing variations in color, size, and packaging.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta preserves SKU formatting in both CSV and XLSX exports. In Excel files, SKU cells are explicitly typed
-            as text strings, preventing Excel from auto-converting codes like <code>001928</code> to the integer
-            <code>1928</code> or scientific notation.
+            Exnta extracts SKUs for every variant mapped on a competitor's store. During formatting, it safeguards these keys so that warehouse scanning codes or supplier sync numbers remain fully intact upon import.
           </div>
         </article>
 
         <!-- Term 11 -->
         <article class="glossary-term reveal" id="term-compare-at-price">
           <h3 class="glossary-term__name">Compare-At Price</h3>
-          <p class="glossary-term__definition">A Shopify-specific pricing field that represents the original or retail
-            price of a product before a discount is applied. When a <code>compare_at_price</code> value is set and is
-            higher than the selling <code>price</code>, Shopify displays a "Sale" badge on the storefront.</p>
+          <p class="glossary-term__definition">An e-commerce database field representing the retail price of a product before a discount. When the compare-at price is higher than the active price, e-commerce themes render strikethroughs and discount badges to drive conversions.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta exports both <code>Variant Price</code> and <code>Variant Compare At Price</code> for every variant.
-            This enables users to calculate discount margins using spreadsheet formulas.
+            Exnta extracts both the active sale price and the compare-at price fields for every product variation, allowing dropshippers to instantly compute discount percentages and margins inside their spreadsheets.
           </div>
         </article>
 
         <!-- Term 12 -->
         <article class="glossary-term reveal" id="term-bulk-image-download">
           <h3 class="glossary-term__name">Bulk Image Downloading</h3>
-          <p class="glossary-term__definition">The process of programmatically downloading all product and variant
-            images from a Shopify store's CDN (Content Delivery Network) to a user's local filesystem.</p>
+          <p class="glossary-term__definition">The automated process of downloading multiple media assets from an online store's content delivery network (CDN) to a local folder, typically compiling them as a single ZIP file to save time.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta includes a built-in bulk image downloader (Pro feature) that fetches high-resolution images directly
-            from Shopify's CDN. Downloads are throttled to prevent browser resource exhaustion, and files are
-            automatically renamed using the product handle for SEO-friendly filenames.
+            Exnta features a high-speed bulk image downloader (Pro). It extracts raw CDN image URLs, downloads them asynchronously to minimize browser lag, and saves them locally as a zip archive with files named after the product handle.
           </div>
         </article>
 
         <!-- Term 13 -->
         <article class="glossary-term reveal" id="term-content-script-sandbox">
           <h3 class="glossary-term__name">Content Script Sandbox</h3>
-          <p class="glossary-term__definition">A browser security mechanism that isolates Chrome extension scripts from
-            the web page's own JavaScript context. Content scripts can read and modify the page DOM but cannot access the
-            page's JavaScript variables or make unauthorized network requests.</p>
+          <p class="glossary-term__definition">A secure, isolated execution environment where browser extensions run their scripts. Content scripts can access and modify the page's HTML structure (DOM) but cannot read the page's JavaScript global variables, preventing detection.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta operates within Chrome's content script sandbox. This isolation means the extension cannot be detected
-            by Shopify's storefront JavaScript, and no scraped data can be intercepted by third-party page scripts.
+            Exnta executes inside Chrome's secure content script sandbox. Since page scripts cannot detect sandboxed scripts, competitor storefronts remain unaware that their catalog is being audited and exported.
           </div>
         </article>
 
         <!-- Term 14 -->
         <article class="glossary-term reveal" id="term-dom-parsing">
           <h3 class="glossary-term__name">Storefront DOM Parsing</h3>
-          <p class="glossary-term__definition">The technique of reading product information directly from the rendered
-            HTML Document Object Model (DOM) of a Shopify storefront page, rather than relying on API endpoints.</p>
+          <p class="glossary-term__definition">An HTML parsing technique where scripts scrape product values directly from the browser's rendered document hierarchy (DOM) instead of relying on backend JSON or API data feeds.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta uses a hybrid approach: it primarily reads from the structured <code>/products.json</code> endpoint
-            for speed and completeness, but falls back to DOM parsing when JSON endpoints are restricted or customized
-            by the store owner.
+            Exnta uses a hybrid parsing engine. While it defaults to JSON endpoint ingestion for rapid exports, it falls back to DOM parsing on customized storefronts, ensuring high reliability across all Shopify layouts.
           </div>
         </article>
 
         <!-- Term 15 -->
         <article class="glossary-term reveal" id="term-handle">
           <h3 class="glossary-term__name">Handle (Shopify)</h3>
-          <p class="glossary-term__definition">A URL-safe, lowercase string that uniquely identifies a product within a
-            Shopify store. The handle is derived from the product title (e.g., "Blue Cotton T-Shirt" →
-            <code>blue-cotton-t-shirt</code>) and is used in the product's URL path.</p>
+          <p class="glossary-term__definition">A lowercase, URL-safe text slug used by Shopify to define a product's unique web address (derived from the title, e.g., 'Leather Travel Bag' becomes 'leather-travel-bag'). Handles link products to variant records during data imports.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta exports the <code>Handle</code> field for every product. This field serves as the primary key for
-            re-importing products into Shopify or WooCommerce and is used for automatic image file renaming.
+            Exnta exports handles as the primary index key for catalog rows, allowing you to import your CSV file straight to e-commerce platforms with all variant options grouped correctly.
           </div>
         </article>
 
         <!-- Term 16 -->
         <article class="glossary-term reveal" id="term-store-detection">
           <h3 class="glossary-term__name">Shopify Store Detection</h3>
-          <p class="glossary-term__definition">The process of programmatically determining whether a website is built on
-            the Shopify platform. Common detection methods include checking for Shopify-specific meta tags, JavaScript
-            globals (<code>window.Shopify</code>), or the presence of <code>/products.json</code>.</p>
+          <p class="glossary-term__definition">The method of scanning a website's structural source code to identify e-commerce platform fingerprints, such as scripts mentioning 'Shopify', characteristic catalog URLs, or native metadata flags.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta automatically detects Shopify stores when the user navigates to any website. The extension checks for
-            the <code>window.Shopify</code> JavaScript object and the availability of <code>/products.json</code>,
-            displaying a green indicator badge when a Shopify store is confirmed.
+            Exnta checks websites automatically as you navigate, parsing the global environment for Shopify objects and changing its badge state to alert you that a store is ready to export.
           </div>
         </article>
 
         <!-- Term 17 -->
         <article class="glossary-term reveal" id="term-woocommerce-import">
           <h3 class="glossary-term__name">WooCommerce CSV Import</h3>
-          <p class="glossary-term__definition">WordPress's WooCommerce plugin includes a built-in product CSV importer
-            (<strong>WooCommerce → Products → Import</strong>) that reads CSV files and maps columns to WooCommerce
-            product fields. It supports automatic media downloading from external image URLs.</p>
+          <p class="glossary-term__definition">The built-in importer in WordPress's WooCommerce plugin. It processes spreadsheet files, maps e-commerce columns, and fetches remote image URLs to construct a native WordPress catalog.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta's CSV export format is compatible with WooCommerce's CSV importer. Column headers like
-            <code>Title</code>, <code>SKU</code>, <code>Price</code>, and <code>Image Src</code> are auto-detected by
-            WooCommerce's column mapping wizard, enabling direct imports without manual header remapping.
+            Exnta exports files with column headers that map perfectly to the WooCommerce importer. Users can scrape a Shopify store with Exnta and import the file to WooCommerce without having to manually remap table fields.
           </div>
         </article>
 
         <!-- Term 18 -->
         <article class="glossary-term reveal" id="term-browser-extension">
           <h3 class="glossary-term__name">Browser Extension</h3>
-          <p class="glossary-term__definition">A software module installed into a web browser (Chrome, Edge, Brave,
-            Opera) that adds functionality to the browsing experience. Extensions run in a sandboxed environment with
-            declarative permissions.</p>
+          <p class="glossary-term__definition">A small software module that customizes the web browsing experience. Extensions run within sandboxed environments with specific permissions and interact directly with active browser tabs.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta is distributed as a Chromium-based browser extension through the Chrome Web Store. It is compatible
-            with Google Chrome, Microsoft Edge, Brave, and Opera. The extension requests minimal permissions: active tab
-            access and local storage only.
+            Exnta is distributed as a lightweight Chromium extension, making it compatible with Google Chrome, Brave, Microsoft Edge, and Opera without requiring local software installations.
           </div>
         </article>
 
         <!-- Term 19 -->
         <article class="glossary-term reveal" id="term-json">
           <h3 class="glossary-term__name">JSON (JavaScript Object Notation)</h3>
-          <p class="glossary-term__definition">A lightweight, human-readable data interchange format that uses key-value
-            pairs and arrays. JSON is the native response format of Shopify's <code>/products.json</code> endpoint.</p>
+          <p class="glossary-term__definition">A lightweight, text-based data interchange format structured around key-value pairs and nested arrays. JSON is the primary serialization format used by web applications and modern API feeds.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            Exnta offers JSON as a third export format alongside CSV and XLSX (Pro feature). The JSON export preserves
-            the original nested object structure from Shopify's API response, making it ideal for developers building
-            custom integrations or populating databases.
+            For developers and data analysts, Exnta provides full JSON exports. This option retains the nested catalog structure, making it easy to import competitor data directly into custom databases or script pipelines.
           </div>
         </article>
 
         <!-- Term 20 -->
         <article class="glossary-term reveal" id="term-slow-mode">
           <h3 class="glossary-term__name">Slow Mode</h3>
-          <p class="glossary-term__definition">A user-configurable setting in scraper tools that introduces artificial
-            delays between consecutive HTTP requests during catalog scraping. This reduces the request frequency to
-            mimic natural human browsing patterns.</p>
+          <p class="glossary-term__definition">A throttling feature in scrapers that inserts delays between requests to match natural human browsing speed. This helps avoid triggering automated IP blocks or rate limits during large scrapes.</p>
           <div class="glossary-term__context">
             <div class="glossary-term__context-label">Exnta Context</div>
-            When Slow Mode is enabled, Exnta adds randomized pauses of 1–3 seconds between each pagination request.
-            This is recommended for scraping large catalogs (1,000+ products) to avoid triggering Shopify's rate
-            limiting on the user's IP address.
+            Exnta offers a built-in Slow Mode with randomized delays of 1 to 3 seconds. It is highly recommended when scraping larger e-commerce sites to keep your IP clean and avoid request failures.
           </div>
         </article>
 
