@@ -79,8 +79,57 @@
 
   
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Scrape Shopify Frontend Metafields",
+  "description": "Extract specialized product specifications and technical attributes hidden inside the target page content blocks.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "How Metafields are Rendered on the Frontend",
+      "text": "Metafields are often loaded as plain HTML elements or JSON structures in the page source. To extract these custom fields: Inspect the DOM: Look for data attributes (such as `data-metafield-spec`) containing the technical values. Query JSON Endpoints: Check if the metafield details are exposed in the product's backend data endpoints.",
+      "url": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metafields-frontend.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Extracting Technical Specifications Natively",
+      "text": "Use local browser scraping tools to parse these custom frontend attributes, saving the technical values to structured spreadsheet columns for your product research.",
+      "url": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metafields-frontend.html#step2"
+    }
+  ]
+}
+  </script>
   
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Scrape Shopify Frontend Metafields",
+      "item": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metafields-frontend.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

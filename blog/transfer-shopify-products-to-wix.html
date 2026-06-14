@@ -78,9 +78,58 @@
   </script>
 
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Transfer Shopify Products to Wix via CSV",
+  "description": "Replatform effortlessly. Export your entire product configuration from Shopify and cleanly adjust headers for Wix imports.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Aligning Headers for Wix Imports",
+      "text": "Wix uses a specific import template. Adjust your spreadsheet columns to match Wix's required fields: Modify `Title` to `Name` . Map `Variant Price` to `Price` . Map `Image Src` to `Product Image` . Verify that shipping weight fields match Wix's measurement settings.",
+      "url": "https://shopify-exporter.exnta.com/blog/transfer-shopify-products-to-wix.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Executing the Migration",
+      "text": "Use Shopify Product Exporter to export shopify products to csv cleanly. Clean up the sheet headers in your spreadsheet editor, and upload the file to your Wix store catalog dashboard to complete the import.",
+      "url": "https://shopify-exporter.exnta.com/blog/transfer-shopify-products-to-wix.html#step2"
+    }
+  ]
+}
+  </script>
   
 
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Transfer Shopify Products to Wix via CSV",
+      "item": "https://shopify-exporter.exnta.com/blog/transfer-shopify-products-to-wix.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

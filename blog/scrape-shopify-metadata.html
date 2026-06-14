@@ -79,8 +79,57 @@
 
   
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Scrape Shopify Metadata, Handles & Titles",
+  "description": "Aggregate essential structural elements from target sites to establish baseline configurations for your product files.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Core Fields to Extract",
+      "text": "Product Handle: The URL-friendly identifier (e.g. `leather-travel-duffel-bag`) that determines the product page path. Vendor Code: The brand name or supplier identifier that maps the product back to its manufacturer. Metafields: Custom metadata fields that contain technical specifications or additional features.",
+      "url": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metadata.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Extracting Metadata Safely",
+      "text": "Using Shopify Product Exporter allows you to export this backend metadata automatically. The tool formats these parameters into structured columns, ready to be imported into your catalog files.",
+      "url": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metadata.html#step2"
+    }
+  ]
+}
+  </script>
   
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Scrape Shopify Metadata, Handles & Titles",
+      "item": "https://shopify-exporter.exnta.com/blog/scrape-shopify-metadata.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

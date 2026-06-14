@@ -79,8 +79,57 @@
 
   
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Move Scraped Shopify Data to Offline DB",
+  "description": "Developer documentation for setting up automation scripts that transition text assets into secure databases.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Setting Up Your Database Schema",
+      "text": "To import product catalogs, create a database schema that maps typical Shopify attributes: CREATE TABLE products ( id VARCHAR(255) PRIMARY KEY, title VARCHAR(255), handle VARCHAR(255), vendor VARCHAR(255), price DECIMAL(10, 2), compare_at_price DECIMAL(10, 2), sku VARCHAR(100), weight DECIMAL(10, 2) );",
+      "url": "https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Running Python Import Pipelines",
+      "text": "You can write a simple Python script to read your exported CSV files using the `pandas` library, clean up formatting anomalies, and write the data directly to your local SQL database.",
+      "url": "https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html#step2"
+    }
+  ]
+}
+  </script>
   
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Move Scraped Shopify Data to Offline DB",
+      "item": "https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

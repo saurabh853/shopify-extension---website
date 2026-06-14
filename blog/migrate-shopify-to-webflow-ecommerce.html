@@ -78,9 +78,58 @@
   </script>
 
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Migrate Shopify Data Tables to Webflow",
+  "description": "Design-focused execution blueprints to populating customized Webflow CMS product collections using clean CSV tables.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Webflow CMS Column Mapping Rules",
+      "text": "Webflow uses a specific CMS structure. Map your exported Shopify columns to these Webflow fields: Modify `Title` to `Name` . Map `Body (HTML)` to `Description` . Map `Variant Price` to `Price` . Map `Image Src` to `Main Image` .",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-webflow-ecommerce.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Running the Database Shift",
+      "text": "First, use a local browser tool to export shopify products to csv cleanly. Clean up the sheet headers in your editor, and import the file to Webflow E-Commerce to build your product collection.",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-webflow-ecommerce.html#step2"
+    }
+  ]
+}
+  </script>
   
 
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Migrate Shopify Data Tables to Webflow",
+      "item": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-webflow-ecommerce.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

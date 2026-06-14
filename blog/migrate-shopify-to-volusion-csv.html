@@ -78,9 +78,58 @@
   </script>
 
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Rebuild Complex Product Layouts on Volusion",
+  "description": "Map item sizing metrics and dimensional product constraints perfectly to fit Volusion\u2019s unique system logic.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Volusion Option Mapping Rules",
+      "text": "Map your columns to match Volusion's required fields: `productcode` : Map from the Shopify `Variant SKU` column. `productname` : Map from the Shopify `Title` column. `productprice` : Map from `Variant Price`. Verify variant attributes align with Volusion's option configurations.",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-volusion-csv.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Executing the Migration",
+      "text": "First, use a local browser tool to export shopify to excel cleanly. Clean up formatting anomalies in your editor, and import the file to Volusion to complete the catalog transfer.",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-volusion-csv.html#step2"
+    }
+  ]
+}
+  </script>
   
 
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rebuild Complex Product Layouts on Volusion",
+      "item": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-volusion-csv.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

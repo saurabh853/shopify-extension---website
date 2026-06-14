@@ -78,9 +78,58 @@
   </script>
 
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Move Shopify Data into Zen Cart Tables",
+  "description": "Technical steps to transform modern JSON/CSV structures into standard, database-friendly layout schemas.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Zen Cart Data Mapping Rules",
+      "text": "Map your columns to match Zen Cart's required fields: `products_model` : Map from the Shopify `Variant SKU` column. `products_name` : Map from the Shopify `Title` column. `products_price` : Map from `Variant Price`. `products_quantity` : Map from `Variant Inventory Qty`.",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-zencart-database.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Executing the Migration",
+      "text": "First, use a local browser tool to export shopify products to csv cleanly. Clean up formatting anomalies in your editor, and import the file to Zen Cart to build your store catalog.",
+      "url": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-zencart-database.html#step2"
+    }
+  ]
+}
+  </script>
   
 
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Move Shopify Data into Zen Cart Tables",
+      "item": "https://shopify-exporter.exnta.com/blog/migrate-shopify-to-zencart-database.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 

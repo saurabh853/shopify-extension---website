@@ -79,8 +79,57 @@
 
   
   <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Scrape Variant Image ID Associations",
+  "description": "Match the exact right file link to specific options like color choices to ensure a seamless upload on your dashboard.",
+  "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "How Shopify Maps Variant Images",
+      "text": "Shopify assigns a unique `Image ID` to each photo and links it to specific `Variant ID` fields. During imports, these matches must be specified in the image column of your CSV file to link photos to their options.",
+      "url": "https://shopify-exporter.exnta.com/blog/variant-image-id-associations.html#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Automating Image Mapping",
+      "text": "To simplify this mapping, use local extraction tools to export your catalog data. These tools map image URLs to option rows automatically, saving you from matching IDs manually in your spreadsheets.",
+      "url": "https://shopify-exporter.exnta.com/blog/variant-image-id-associations.html#step2"
+    }
+  ]
+}
+  </script>
   
   <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shopify-exporter.exnta.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://shopify-exporter.exnta.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Scrape Variant Image ID Associations",
+      "item": "https://shopify-exporter.exnta.com/blog/variant-image-id-associations.html"
+    }
+  ]
+}
+  </script>
   
 </head>
 
