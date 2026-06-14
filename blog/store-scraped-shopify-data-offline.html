@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Move Scraped Shopify Data to Offline DB</title>
+  <meta name="description"
+    content="Developer documentation for setting up automation scripts that transition text assets into secure databases.">
+  <meta name="keywords"
+    content="store scraped shopify data offline, shopify to SQL database, python e-commerce parser, developer backup pipeline">
+  <meta name="author" content="Exnta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical"
+    href="https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url"
+    content="https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html">
+  <meta property="og:title" content="Move Scraped Shopify Data to Offline DB">
+  <meta property="og:description"
+    content="Developer documentation for setting up automation scripts that transition text assets into secure databases.">
+  <meta property="og:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+  <meta property="article:published_time" content="2026-08-02T09:00:00+00:00">
+  <meta property="article:modified_time" content="2026-08-02T09:00:00+00:00">
+  <meta property="article:author" content="Exnta">
+  <meta property="article:section" content="Guides">
+  <meta property="article:tag" content="Scraping">
+  <meta property="article:tag" content="Developer DB">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Move Scraped Shopify Data to Offline DB">
+  <meta name="twitter:description"
+    content="Developer documentation for setting up automation scripts that transition text assets into secure databases.">
+  <meta name="twitter:image" content="https://shopify-exporter.exnta.com/assets/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="128x128" href="../assets/images/icon128.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Step-by-Step: Moving Scraped Products to an Offline DB",
+    "description": "Developer documentation for setting up automation scripts that transition text assets into secure databases.",
+    "image": "https://shopify-exporter.exnta.com/assets/images/og-image.png",
+    "datePublished": "2026-08-02T09:00:00+00:00",
+    "dateModified": "2026-08-02T09:00:00+00:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Exnta",
+      "url": "https://shopify-exporter.exnta.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Exnta",
+      "url": "https://shopify-exporter.exnta.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shopify-exporter.exnta.com/assets/images/icon128.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html"
+    },
+    "articleSection": "Guides",
+    "keywords": ["store scraped shopify data offline", "shopify to SQL database", "python e-commerce parser", "developer backup pipeline"]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shopify-exporter.exnta.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://shopify-exporter.exnta.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Step-by-Step: Moving Scraped Products to an Offline DB",
+        "item": "https://shopify-exporter.exnta.com/blog/store-scraped-shopify-data-offline.html"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Shopify Product Exporter Home">
+        <img src="../assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+        <span class="nav__logo-text">Shopify Product Exporter</span>
+      </a>
+      <div class="nav__links" id="nav-links" role="menubar">
+        <a href="/" class="nav__link" role="menuitem">Home</a>
+        <a href="/#features" class="nav__link" role="menuitem">Features</a>
+        <a href="/#pricing" class="nav__link" role="menuitem">Pricing</a>
+        <a href="/blog/" class="nav__link" role="menuitem">Blog</a>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+          class="nav__cta" target="_blank" rel="noopener noreferrer" role="menuitem" id="nav-install-btn">
+          Install Free
+        </a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== BLOG POST ========== -->
+  <main class="blog-post" id="blog-post">
+    <div class="container">
+      <div class="blog-post__inner">
+
+        <!-- Meta -->
+        <div class="blog-post__meta">
+          <span class="blog-post__tag">Guides</span>
+          <span class="blog-post__date">Published: August 2, 2026</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="blog-post__title">Step-by-Step: Moving Scraped Products to an Offline DB</h1>
+
+        <!-- Hero Image -->
+        <picture>
+          <source srcset="../assets/images/blog-data-export.webp" type="image/webp">
+          <img src="../assets/images/blog-data-export.png" alt="Step-by-Step: Moving Scraped Products to an Offline DB" class="blog-post__hero-img"
+            width="780" height="410" loading="eager">
+        </picture>
+
+        <!-- Content -->
+        <div class="blog-post__content">
+          
+<p>If you are building custom price comparison apps, automated inventory managers, or running advanced e-commerce analytics, you need to store data in a database. Storing raw CSV files can be difficult to scale. Moving <strong>scraped Shopify data to an offline DB</strong> (like SQLite, PostgreSQL, or MongoDB) provides a more robust structure for your applications.</p>
+
+<h2>Setting Up Your Database Schema</h2>
+<p>To import product catalogs, create a database schema that maps typical Shopify attributes:</p>
+<pre><code>CREATE TABLE products (
+  id VARCHAR(255) PRIMARY KEY,
+  title VARCHAR(255),
+  handle VARCHAR(255),
+  vendor VARCHAR(255),
+  price DECIMAL(10, 2),
+  compare_at_price DECIMAL(10, 2),
+  sku VARCHAR(100),
+  weight DECIMAL(10, 2)
+);</code></pre>
+
+<h2>Running Python Import Pipelines</h2>
+<p>You can write a simple Python script to read your exported CSV files using the `pandas` library, clean up formatting anomalies, and write the data directly to your local SQL database.</p>
+
+        </div>
+
+        <!-- CTA Box -->
+        <div class="blog-post__cta">
+          <h3>Ready to export product data?</h3>
+          <p>Get Shopify Product Exporter and download any competitor catalog in one click.</p>
+          <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+            class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            Install Free Extension
+          </a>
+        </div>
+
+        <div class="return-home">
+          <a href="/blog/">Back to Blog</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" aria-label="Shopify Product Exporter Home">
+            <img src="../assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+            <span class="nav__logo-text">Shopify Product Exporter</span>
+          </a>
+          <p class="footer__brand-desc">The fastest way to export products from any Shopify store. Built by Exnta — 100%
+            local, private, and free.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Product</h4>
+          <div class="footer__link-list">
+            <a href="/#features" class="footer__link">Features</a>
+            <a href="/features/shopify-to-csv.html" class="footer__link">Export to CSV (Free)</a>
+            <a href="/features/shopify-to-excel.html" class="footer__link">Export to Excel</a>
+            <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+              class="footer__link" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Resources</h4>
+          <div class="footer__link-list">
+            <a href="/blog/" class="footer__link">Blog</a>
+            <a href="/use-cases/dropshipping-research.html" class="footer__link">Dropshipping Tool</a>
+            <a href="/use-cases/competitor-spying.html" class="footer__link">Shopify Spying Tool</a>
+            <a href="/ai-glossary.html" class="footer__link">AI Glossary</a>
+            <a href="/compare/exnta-vs-cloud-scrapers.html" class="footer__link">Exnta vs Cloud Scrapers</a>
+            <a href="/collections/" class="footer__link">Shopify Store Types</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Legal</h4>
+          <div class="footer__link-list">
+            <a href="/privacy.html" class="footer__link">Privacy Policy</a>
+            <a href="/terms.html" class="footer__link">Terms of Service</a>
+            <a href="mailto:support@exnta.com" class="footer__link">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Exnta. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy.html" class="footer__bottom-link">Privacy</a>
+          <a href="/terms.html" class="footer__bottom-link">Terms</a>
+          <a href="mailto:support@exnta.com" class="footer__bottom-link">support@exnta.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      nav.classList.toggle('nav-open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+      toggle.classList.toggle('active', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        nav.classList.remove('nav-open');
+        document.body.classList.remove('nav-open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
