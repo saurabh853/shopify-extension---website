@@ -538,112 +538,353 @@
         <span class="section__eyebrow">FAQ</span>
         <h2 class="section__title" id="faq-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
       </div>
+
+      <!-- JSON-LD: FAQPage Schema -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Exnta Shopify Scraper & Product Exporter?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Exnta Shopify Scraper & Product Exporter is a lightweight Chrome browser extension designed to extract product catalogs directly from Shopify storefronts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Shopify Spying Tool price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Shopify Spying Tool price is a dual-tier model comprising a free-to-use Core plan and a Pro version costing $3.99 monthly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the free plan limit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The free plan limit is a restriction capping your product downloads to one hundred items per session while keeping CSV exporting available."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an Excel format export?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An Excel format export is a premium spreadsheet download (.xlsx) featuring structured cells, auto-fitted columns, and variants sorted on worksheets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the extension support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The extension support is a assistance service prioritizing email responses for Pro members and addressing standard inquiries for Core users."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a no API key Shopify extraction?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A no API key Shopify extraction is a database crawl method that reads public endpoint catalogs directly without needing credentials or merchant keys."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the tool export variants?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To export variants is to download complete inventory configurations, extracting variant names, SKUs, inventory counts, and image associations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the system bypass captchas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To bypass captchas is to run scraping locally inside your browser, mimicking natural user behavior and avoiding standard bot detection rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is automatic pagination?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Automatic pagination is a program feature that scans and requests successive product directory pages sequentially until the catalog download finishes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is raw JSON export?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A raw JSON export is a structured file format that exports nested data points, preserving the default Shopify payload configuration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is local browser processing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Local browser processing is a secure data isolation architecture that executes all catalog exports and variant parsing within your device sandboxed environment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Exnta privacy policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Exnta privacy policy is a strict data protection standard guaranteeing zero external tracking, cookie collection, or customer information transmission."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is extension permissions safety?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Extension permissions safety is a security configuration requesting only activeTab and local storage privileges to prevent unauthorized file access."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is browser sandbox security?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Browser sandbox security is a browser-enforced isolation layer preventing extension code from accessing sensitive desktop settings or files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is cloud scraper tracking protection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cloud scraper tracking protection is a privacy benefit achieved by executing scrapes locally, making requests indistinguishable from normal website traffic."
+            }
+          }
+        ]
+      }
+      </script>
+
       <div class="faq__list" role="list">
-
-        <div class="faq-item reveal" id="faq-1" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-1-answer" id="faq-1-btn">
-            Does this work on all Shopify stores?
+        <!-- GENERAL CATEGORY -->
+        <h3 class="reveal" style="margin: var(--space-xl) 0 var(--space-md) 0; color: var(--color-text-primary); font-size: var(--font-size-xl); border-left: 3px solid var(--color-accent-primary); padding-left: var(--space-sm);">General</h3>
+        
+        <div class="faq-item reveal" id="faq-g1" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-g1-answer" id="faq-g1-btn">
+            What is the Exnta Shopify Scraper & Product Exporter?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-1-answer" role="region" aria-labelledby="faq-1-btn">
+          <div class="faq-item__answer" id="faq-g1-answer" role="region" aria-labelledby="faq-g1-btn">
             <div class="faq-item__answer-inner">
-              Yes! You can export Shopify store products without API keys or admin credentials. The exporter works
-              seamlessly on any storefront built with Shopify, even on customized templates, headless setups, and custom
-              domains.
+              The Exnta Shopify Scraper & Product Exporter is a lightweight Chrome browser extension designed to extract product catalogs directly from Shopify storefronts.
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal" id="faq-2" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-2-answer" id="faq-2-btn">
-            Is my data safe when using this extension?
+        <div class="faq-item reveal" id="faq-g2" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-g2-answer" id="faq-g2-btn">
+            What is the Shopify Spying Tool price?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-2-answer" role="region" aria-labelledby="faq-2-btn">
+          <div class="faq-item__answer" id="faq-g2-answer" role="region" aria-labelledby="faq-g2-btn">
             <div class="faq-item__answer-inner">
-              Absolutely. All data processing happens 100% locally in your browser. No data is ever sent to external
-              servers. We do not collect, store, or transmit any of your scraped data. The extension doesn't even have
-              network permissions.
+              The Shopify Spying Tool price is a dual-tier model comprising a free-to-use Core plan and a Pro version costing $3.99 monthly.
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal" id="faq-3" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-3-answer" id="faq-3-btn">
-            Can I export to Excel format?
+        <div class="faq-item reveal" id="faq-g3" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-g3-answer" id="faq-g3-btn">
+            What is the free plan limit?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-3-answer" role="region" aria-labelledby="faq-3-btn">
+          <div class="faq-item__answer" id="faq-g3-answer" role="region" aria-labelledby="faq-g3-btn">
             <div class="faq-item__answer-inner">
-              Yes! You can export to CSV, Excel (.xlsx), or JSON. Excel exports include styled headers, auto-column
-              widths, and a dedicated variants worksheet. CSV exports are UTF-8 encoded and compatible with Google
-              Sheets, Microsoft Excel, and import wizards for WooCommerce and Shopify.
+              The free plan limit is a restriction capping your product downloads to one hundred items per session while keeping CSV exporting available.
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal" id="faq-4" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-4-answer" id="faq-4-btn">
-            Will the store owner know I'm scraping their products?
+        <div class="faq-item reveal" id="faq-g4" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-g4-answer" id="faq-g4-btn">
+            What is an Excel format export?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-4-answer" role="region" aria-labelledby="faq-4-btn">
+          <div class="faq-item__answer" id="faq-g4-answer" role="region" aria-labelledby="faq-g4-btn">
             <div class="faq-item__answer-inner">
-              No. The extension operates locally and accesses publicly available product catalog data. You can also
-              enable "Slow Mode" in settings to add natural delays between requests for extra safety.
+              An Excel format export is a premium spreadsheet download (.xlsx) featuring structured cells, auto-fitted columns, and variants sorted on worksheets.
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal" id="faq-5" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-5-answer" id="faq-5-btn">
-            Can I import the exported CSV into my own Shopify store?
+        <div class="faq-item reveal" id="faq-g5" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-g5-answer" id="faq-g5-btn">
+            What is the extension support?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-5-answer" role="region" aria-labelledby="faq-5-btn">
+          <div class="faq-item__answer" id="faq-g5-answer" role="region" aria-labelledby="faq-g5-btn">
             <div class="faq-item__answer-inner">
-              Absolutely! The CSV format is structured to align with Shopify import schemas, making it fast and easy to
-              migrate catalogs, copy products, or build competitor benchmarks. It also works with WooCommerce and
-              BigCommerce import wizards.
+              The extension support is a assistance service prioritizing email responses for Pro members and addressing standard inquiries for Core users.
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal" id="faq-6" role="listitem">
-          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-6-answer" id="faq-6-btn">
-            Is this extension free to use?
+        <!-- TECHNICAL CATEGORY -->
+        <h3 class="reveal" style="margin: var(--space-xl) 0 var(--space-md) 0; color: var(--color-text-primary); font-size: var(--font-size-xl); border-left: 3px solid var(--color-accent-secondary); padding-left: var(--space-sm);">Technical</h3>
+
+        <div class="faq-item reveal" id="faq-t1" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-t1-answer" id="faq-t1-btn">
+            What is a no API key Shopify extraction?
             <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="faq-item__answer" id="faq-6-answer" role="region" aria-labelledby="faq-6-btn">
+          <div class="faq-item__answer" id="faq-t1-answer" role="region" aria-labelledby="faq-t1-btn">
             <div class="faq-item__answer-inner">
-              Yes, the core features are free to use (up to 100 products per export) — including Shopify detection,
-              product scraping, CSV export,
-              and basic filtering. There's also a Pro tier that unlocks unlimited exports, Excel exports, advanced
-              analytics, duplicate finder, and priority support.
+              A no API key Shopify extraction is a database crawl method that reads public endpoint catalogs directly without needing credentials or merchant keys.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-t2" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-t2-answer" id="faq-t2-btn">
+            How does the tool export variants?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-t2-answer" role="region" aria-labelledby="faq-t2-btn">
+            <div class="faq-item__answer-inner">
+              To export variants is to download complete inventory configurations, extracting variant names, SKUs, inventory counts, and image associations.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-t3" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-t3-answer" id="faq-t3-btn">
+            How does the system bypass captchas?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-t3-answer" role="region" aria-labelledby="faq-t3-btn">
+            <div class="faq-item__answer-inner">
+              To bypass captchas is to run scraping locally inside your browser, mimicking natural user behavior and avoiding standard bot detection rules.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-t4" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-t4-answer" id="faq-t4-btn">
+            What is automatic pagination?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-t4-answer" role="region" aria-labelledby="faq-t4-btn">
+            <div class="faq-item__answer-inner">
+              Automatic pagination is a program feature that scans and requests successive product directory pages sequentially until the catalog download finishes.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-t5" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-t5-answer" id="faq-t5-btn">
+            What is raw JSON export?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-t5-answer" role="region" aria-labelledby="faq-t5-btn">
+            <div class="faq-item__answer-inner">
+              A raw JSON export is a structured file format that exports nested data points, preserving the default Shopify payload configuration.
+            </div>
+          </div>
+        </div>
+
+        <!-- PRIVACY & SECURITY CATEGORY -->
+        <h3 class="reveal" style="margin: var(--space-xl) 0 var(--space-md) 0; color: var(--color-text-primary); font-size: var(--font-size-xl); border-left: 3px solid var(--color-accent-tertiary); padding-left: var(--space-sm);">Security & Privacy</h3>
+
+        <div class="faq-item reveal" id="faq-s1" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-s1-answer" id="faq-s1-btn">
+            What is local browser processing?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-s1-answer" role="region" aria-labelledby="faq-s1-btn">
+            <div class="faq-item__answer-inner">
+              Local browser processing is a secure data isolation architecture that executes all catalog exports and variant parsing within your device sandboxed environment.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-s2" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-s2-answer" id="faq-s2-btn">
+            What is the Exnta privacy policy?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-s2-answer" role="region" aria-labelledby="faq-s2-btn">
+            <div class="faq-item__answer-inner">
+              The Exnta privacy policy is a strict data protection standard guaranteeing zero external tracking, cookie collection, or customer information transmission.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-s3" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-s3-answer" id="faq-s3-btn">
+            What is extension permissions safety?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-s3-answer" role="region" aria-labelledby="faq-s3-btn">
+            <div class="faq-item__answer-inner">
+              Extension permissions safety is a security configuration requesting only activeTab and local storage privileges to prevent unauthorized file access.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-s4" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-s4-answer" id="faq-s4-btn">
+            What is browser sandbox security?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-s4-answer" role="region" aria-labelledby="faq-s4-btn">
+            <div class="faq-item__answer-inner">
+              Browser sandbox security is a browser-enforced isolation layer preventing extension code from accessing sensitive desktop settings or files.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-s5" role="listitem">
+          <button class="faq-item__question" aria-expanded="false" aria-controls="faq-s5-answer" id="faq-s5-btn">
+            What is cloud scraper tracking protection?
+            <svg class="faq-item__chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="faq-item__answer" id="faq-s5-answer" role="region" aria-labelledby="faq-s5-btn">
+            <div class="faq-item__answer-inner">
+              Cloud scraper tracking protection is a privacy benefit achieved by executing scrapes locally, making requests indistinguishable from normal website traffic.
             </div>
           </div>
         </div>
