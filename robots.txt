@@ -4,5 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /scratch/
+Disallow: /programmatic_seo_dataset.csv
 
 Sitemap: https://shopify-exporter.exnta.com/sitemap.xml

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Shopify Product Exporter</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to the Shopify Product Exporter homepage.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/icon128.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.4">
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .error-page__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .error-page__content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+    .error-page__code {
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: var(--space-md);
+    }
+    .error-page__title {
+      font-size: var(--font-size-2xl);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-md);
+    }
+    .error-page__text {
+      font-size: var(--font-size-md);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-xl);
+    }
+    .error-page__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+      margin-top: var(--space-lg);
+    }
+    .error-page__link {
+      color: var(--color-accent-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: var(--font-size-sm);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      transition: all 0.2s ease;
+    }
+    .error-page__link:hover {
+      background: rgba(var(--color-accent-primary-rgb, 99, 102, 241), 0.1);
+      border-color: var(--color-accent-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Shopify Product Exporter Home">
+        <img src="assets/images/icon128.png" alt="Shopify Product Exporter Logo" width="36" height="36">
+        <span class="nav__logo-text">Shopify Product Exporter</span>
+      </a>
+      <div class="nav__links" id="nav-links" role="menubar">
+        <a href="/" class="nav__link" role="menuitem">Home</a>
+        <a href="/#features" class="nav__link" role="menuitem">Features</a>
+        <a href="/#pricing" class="nav__link" role="menuitem">Pricing</a>
+        <a href="/blog/" class="nav__link" role="menuitem">Blog</a>
+        <a href="https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc"
+          class="nav__cta" target="_blank" rel="noopener noreferrer" role="menuitem" id="nav-install-btn">
+          Install Free
+        </a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="error-page" id="error-page">
+    <div class="error-page__bg">
+      <div class="glow-orb glow-orb--teal" style="top: -10%; left: 30%;"></div>
+      <div class="glow-orb glow-orb--purple" style="bottom: 10%; right: 20%;"></div>
+    </div>
+    <div class="error-page__content">
+      <div class="error-page__code">404</div>
+      <h1 class="error-page__title">Page Not Found</h1>
+      <p class="error-page__text">
+        The page you're looking for doesn't exist or has been moved. 
+        Try one of these links to get back on track.
+      </p>
+      <a href="/" class="btn btn--primary">Back to Homepage</a>
+      <div class="error-page__links">
+        <a href="/blog/" class="error-page__link">Blog & Guides</a>
+        <a href="/#features" class="error-page__link">Features</a>
+        <a href="/#pricing" class="error-page__link">Pricing</a>
+        <a href="/collections/" class="error-page__link">Store Collections</a>
+        <a href="mailto:support@exnta.com" class="error-page__link">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      nav.classList.toggle('nav-open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+      toggle.classList.toggle('active', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+
+</html>
