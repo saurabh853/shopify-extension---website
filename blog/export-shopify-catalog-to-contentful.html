@@ -209,6 +209,47 @@
 
 <h2>Executing the Migration</h2>
 <p>Export your Shopify products using a local extension. Modify the column headers in your editor, and import the file to your Contentful dashboard to build your product database.</p>
+<!-- Expanded thin-content section -->
+<h2>Practical Migration Workflow</h2>
+<p>A good migration starts with a clean source export, not with the import screen of the destination platform. For <strong>Porting Shopify Product Collections into clean Contentful JSON assets</strong>, treat the Shopify catalog as a structured dataset: products, variants, option names, prices, image URLs, inventory fields, tags, vendors, SEO fields, and descriptions all need to be reviewed before anything is uploaded elsewhere. This reduces failed imports and makes it easier to spot missing variant relationships before customers see the new store.</p>
+
+<h2>Fields to Review Before Importing</h2>
+<ul>
+  <li><strong>Product identity:</strong> Preserve handles, titles, vendors, product types, and tags so redirects, collections, and filters can be rebuilt predictably.</li>
+  <li><strong>Variant structure:</strong> Check option names, option values, SKUs, barcodes, weights, compare-at prices, and inventory policies before mapping them to the new platform.</li>
+  <li><strong>Media assets:</strong> Export image URLs with their product and variant associations so galleries, thumbnails, and color-specific images stay connected.</li>
+  <li><strong>Content fields:</strong> Review body HTML, SEO titles, SEO descriptions, and metafield-like content that may need a custom field in the destination system.</li>
+</ul>
+
+<h2>Step-by-Step Process</h2>
+<ol>
+  <li>Export the full Shopify catalog and keep an untouched backup copy of the original CSV or Excel file.</li>
+  <li>Create a working sheet where destination columns are added beside the original Shopify columns.</li>
+  <li>Normalize option names, empty values, currencies, weight units, and product status values before importing.</li>
+  <li>Run a small test import with five to ten products that include simple items, multi-variant items, sale prices, and multiple images.</li>
+  <li>Compare the imported products against the source storefront and fix mapping issues before processing the full catalog.</li>
+</ol>
+
+<h2>Quality Checks That Prevent Rework</h2>
+<p>After the first import, check whether variants appear under the correct parent product, whether prices match the original store, and whether image order is preserved. Pay special attention to products with more than one option because flat files can accidentally split color, size, and material combinations into separate products. Also confirm that special characters in descriptions and titles display correctly after import.</p>
+
+<h2>Common Mistakes</h2>
+<ul>
+  <li>Importing directly from a raw export without cleaning blank option values or duplicate handles.</li>
+  <li>Forgetting to preserve SKU formatting, especially SKUs that begin with zeros.</li>
+  <li>Mapping image URLs without checking variant-specific image relationships.</li>
+  <li>Testing only simple products and missing errors that appear on bundled, configurable, or multi-option products.</li>
+</ul>
+<!-- Additional depth section -->
+<h2>Example Spreadsheet Layout</h2>
+<p>For <strong>Porting Shopify Product Collections into clean Contentful JSON assets</strong>, keep one tab for the untouched export, one tab for cleaned Shopify fields, and one tab for the destination mapping. Add columns for import status, required edits, image checks, and notes. This makes the migration reviewable by developers, operators, and content teams without changing the source data.</p>
+<h2>FAQ</h2>
+<p><strong>Should every Shopify column be imported?</strong> No. Import only the fields your destination platform supports, but keep the original export as a reference in case a missing field becomes important later.</p>
+<p><strong>What should be tested first?</strong> Test products with multiple variants, sale prices, long descriptions, and several images because they expose most mapping problems early.</p>
+<!-- Final action section -->
+<h2>Next Steps</h2>
+<p>To put <strong>Porting Shopify Product Collections into clean Contentful JSON assets</strong> into practice, start with one focused Shopify store and one clearly defined question. For example, decide whether you are checking prices, validating product ideas, preparing a migration, or cleaning catalog data. Export the catalog, review the fields that matter to that question, and write down the decision you will make from the result.</p>
+<p>After the first pass, repeat the same workflow on a second store or a later snapshot. Comparing two clean exports is usually more useful than collecting a large amount of messy data. Keep your spreadsheet simple, document the filters you used, and save the raw export separately so your analysis can be checked or repeated later.</p>
 
         </div>
 

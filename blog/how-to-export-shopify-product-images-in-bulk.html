@@ -211,6 +211,37 @@
           <p>Bulk downloading product images doesn't need to be a bottleneck. By extracting the true CDN media paths
             from a Shopify store's backend, tools like **Shopify Product Exporter** make it easy to build high-quality
             catalogs for dropshipping or store migration.</p>
+<!-- Expanded thin-content section -->
+<h2>Data Cleanup Workflow</h2>
+<p><strong>How to Export Shopify Product Images in Bulk</strong> is most useful when the export is clean enough to filter, import, or hand to another team without extra explanation. Shopify catalog data can include nested variants, HTML descriptions, image arrays, tags, vendors, product types, SKUs, barcodes, weights, and sale pricing. A structured cleanup pass turns that raw data into something you can trust for migration, reporting, or product research.</p>
+
+<h2>Columns to Validate</h2>
+<ul>
+  <li><strong>Identifiers:</strong> Handles, SKUs, barcodes, and variant IDs should remain stable and should not be reformatted by spreadsheet software.</li>
+  <li><strong>Variant fields:</strong> Option names and option values should stay aligned so size, color, material, and other choices do not shift columns.</li>
+  <li><strong>Content fields:</strong> Product descriptions, body HTML, SEO titles, and SEO descriptions should preserve formatting where the destination workflow needs it.</li>
+  <li><strong>Media fields:</strong> Image URLs should be checked for broken links, duplicate rows, and variant-specific image relationships.</li>
+</ul>
+
+<h2>Recommended Process</h2>
+<ol>
+  <li>Export the catalog and save a raw backup before making edits.</li>
+  <li>Open a working copy in Excel, Google Sheets, or your preferred data tool.</li>
+  <li>Freeze the header row and confirm each column has a clear purpose.</li>
+  <li>Normalize blank values, duplicate handles, currency formatting, and unexpected HTML fragments.</li>
+  <li>Run filters for missing SKUs, missing prices, empty images, and inconsistent option names.</li>
+</ol>
+
+<h2>Quality Checks Before Using the File</h2>
+<p>Before importing or analyzing the file, sample products from different parts of the catalog: a simple product, a multi-variant product, a discounted product, and a product with several images. Check that each row still belongs to the right parent product and that spreadsheet auto-formatting has not damaged SKUs, barcodes, or long numeric IDs.</p>
+
+<h2>Common Cleanup Mistakes</h2>
+<ul>
+  <li>Letting spreadsheet software convert barcode or SKU values into numbers.</li>
+  <li>Deleting blank-looking columns that are required by an import template.</li>
+  <li>Sorting only part of the sheet and breaking the relationship between products and variants.</li>
+  <li>Editing HTML descriptions without checking how they render on the destination platform.</li>
+</ul>
         </div>
 
         <!-- CTA Box -->
