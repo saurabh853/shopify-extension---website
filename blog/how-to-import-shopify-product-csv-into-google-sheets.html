@@ -19,7 +19,7 @@
   <!-- Primary SEO Meta Tags -->
   <title>How to Import a Shopify Product CSV into Google Sheets Properly</title>
   <meta name="description"
-    content="Learn how to import a Shopify product CSV into Google Sheets without breaking product formats, text fields, or variant cells. Complete formatting tutorial.">
+    content="Practical guide to Import a Shopify Product CSV into Google Sheets Properly with Shopify catalog export steps, CSV cleanup, image handling, field mapping.">
 <meta name="author" content="Exnta">
   <meta name="robots" content="index, follow">
   <link rel="canonical"
@@ -191,31 +191,31 @@
           <p>To avoid these formatting errors, import your CSV using Google Sheets' dedicated import tool:</p>
           <ol>
             <li>Create a new, blank spreadsheet at [sheets.new](https://sheets.new).</li>
-            <li>Go to **File** → **Import** from the top menu.</li>
-            <li>Select the **Upload** tab, click **Browse**, and select the CSV file exported by the <a
+            <li>Go to <strong>File</strong> → <strong>Import</strong> from the top menu.</li>
+            <li>Select the <strong>Upload</strong> tab, click <strong>Browse</strong>, and select the CSV file exported by the <a
                 href="https://shopify-exporter.exnta.com/"><strong>Shopify Product Exporter</strong></a> extension.</li>
-            <li>In the **Import file** options box:
-              * Set **Import location** to **Replace spreadsheet**.
-              * Set **Separator type** to **Detect automatically** (or **Comma**).
-              * **CRITICAL:** Toggle **Convert text to numbers, dates, and formulas** to **NO**. This tells Google
+            <li>In the <strong>Import file</strong> options box:
+              * Set <strong>Import location</strong> to <strong>Replace spreadsheet</strong>.
+              * Set <strong>Separator type</strong> to <strong>Detect automatically</strong> (or <strong>Comma</strong>).
+              * <strong>CRITICAL:</strong> Toggle <strong>Convert text to numbers, dates, and formulas</strong> to <strong>NO</strong>. This tells Google
               Sheets to treat SKUs and IDs as text cells, preventing the deletion of leading zeros or dates formatting
               changes.
             </li>
-            <li>Click **Import data**.</li>
+            <li>Click <strong>Import data</strong>.</li>
           </ol>
 
           <h2>Quick Adjustments After Import</h2>
           <p>Once imported, clean up the presentation for readability:</p>
           <ul>
             <li><strong>Enable Text Wrapping:</strong> Select all cells, go to the top formatting toolbar, and set text
-              wrapping to **Clip** (or **Wrap** if you want to read description paragraphs in the cell).</li>
-            <li><strong>Freeze the Header Row:</strong> Click on row `1`, then go to **View** → **Freeze** → **1 row**.
+              wrapping to <strong>Clip</strong> (or <strong>Wrap</strong> if you want to read description paragraphs in the cell).</li>
+            <li><strong>Freeze the Header Row:</strong> Click on row `1`, then go to <strong>View</strong> → <strong>Freeze</strong> → <strong>1 row</strong>.
               This locks the column titles in place as you scroll down the catalog list.</li>
           </ul>
 
           <h2>Conclusion</h2>
           <p>By using the correct import settings, you protect your inventory data, SKUs, and variant relations. The
-            clean output format of the **Shopify Product Exporter** Chrome extension works seamlessly with Google
+            clean output format of the <strong>Shopify Product Exporter</strong> Chrome extension works seamlessly with Google
             Sheets, giving you the perfect layout to execute bulk edits or pricing updates.</p>
 <!-- Additional depth section -->
 <h2>Example Spreadsheet Layout</h2>
@@ -230,6 +230,8 @@
         </div>
 
         <!-- CTA Box -->
+<h2 id="related-export-guides">Related Shopify Export Guides</h2>
+<p>Keep going with <a href="/features/shopify-to-csv.html">Shopify to CSV export</a>, <a href="/features/shopify-to-excel.html">Shopify to Excel export</a>, <a href="/use-cases/competitor-spying.html">competitor research workflows</a>, and the <a href="/collections/">niche Shopify export directory</a>.</p>
         <div class="blog-post__cta">
           <h3>Need a clean Shopify CSV export?</h3>
           <p>Use Shopify Product Exporter to extract well-structured catalogs in one click.</p>
