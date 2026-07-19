@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /scratch/
 Disallow: /programmatic_seo_dataset.csv
 

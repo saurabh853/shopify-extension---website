@@ -1,0 +1,14 @@
+# Shopify Product Exporter
+
+> Shopify Product Exporter is a free Chrome browser extension by Exnta that allows users to export products from any Shopify store to CSV, Excel, or JSON locally in one click. It is designed for dropshippers, merchants, and developers for competitor research, data migration, and catalog backup without needing API access.
+
+## Key Links
+- [Home](https://shopify-exporter.exnta.com/): Overview of features, pricing, and how it works.
+- [Chrome Web Store](https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc): Install the extension directly.
+- [Features](https://shopify-exporter.exnta.com/#features): Detailed list of capabilities including 1-click scraping, bulk image download, Excel export, and full variant parsing.
+- [Pricing](https://shopify-exporter.exnta.com/#pricing): Details on the Free Core Plan and Pro Plan.
+- [Guides and Resources](https://shopify-exporter.exnta.com/blog/): Tutorials on extracting, analyzing, and migrating e-commerce data.
+- [Use Cases](https://shopify-exporter.exnta.com/use-cases/): How different users (dropshippers, merchants, analysts) utilize the tool.
+
+## Optional: Full Context
+- [Full Documentation](/llms-full.txt): A comprehensive, flattened markdown version of our core website content for deeper AI context.
