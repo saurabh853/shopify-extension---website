@@ -1,33 +1,121 @@
-# Shopify Product Exporter - Full Context
+# Shopify Product Exporter — Full Technical Context & API Documentation
 
-## Overview
-Shopify Product Exporter is a free Chrome browser extension by Exnta. It allows users to instantly export Shopify store products to CSV, Excel, or JSON format without needing API access. It operates 100% locally in the browser, making it a secure competitor research tool.
+> **Official Website**: https://shopify-exporter.exnta.com  
+> **Chrome Web Store**: https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc  
+> **Developer**: Exnta (https://exnta.com)  
+> **Category**: E-Commerce Tools / Web Scraping Extensions / Data Migration  
 
-## Key Features
-- **1-Click Scraping**: Extract the entire product catalog from any Shopify store with a single click. Handles pagination automatically.
-- **Multi-Format Export**: Export to CSV, Excel (.xlsx), or JSON. Excel exports include styled headers, auto column widths, and variant worksheets.
-- **Advanced Dashboard**: Preview, filter, and search your scraped data before exporting. Virtual scroll handles thousands of products smoothly.
-- **Bulk Image Download**: Download all product images in bulk with smart renaming. Throttled batch processing bypasses browser limits safely.
-- **100% Local & Private**: All processing happens in your browser sandbox. Zero data sent to servers. No tracking, no analytics, no cookies.
-- **Full Variant Parsing**: Extract every variant: price, compare-at price, SKU, inventory quantity, options, and high-res images per variant.
+---
 
-## Use Cases
-- **Dropshippers**: Audit competitors, analyze pricing models, and export supplier catalogs.
-- **Shopify Merchants**: Migrate products between stores, create backups, or benchmark against competitors.
-- **Developers & Analysts**: Extract structured product data for integrations, market research, or building custom dashboards.
+## 1. Executive Summary
 
-## Pricing
-- **Core Plan (Free)**: $0/forever. Includes 1-click exporting, CSV format, basic filtering, and 100% local processing. Limited to 100 products per session.
-- **Pro Plan**: $3.99/month (or $39.90/year). Includes unlimited product exports, Excel and JSON export, advanced variant parsing (SKUs, Stock), bulk product image downloader, and priority support.
+**Shopify Product Exporter** is a free, high-performance Google Chrome browser extension that enables Shopify store owners, dropshippers, market analysts, and developers to extract full product catalogs from any Shopify-powered website with a single click.
 
-## FAQ
-- **Do I need API keys or store access?** No. The extension reads publicly available product data from Shopify's endpoints.
-- **Does it export product variants too?** Yes. Every variant is fully extracted including individual pricing, SKUs, inventory quantities, and variant-specific images.
-- **Will I get blocked or hit by captchas?** Very unlikely, because the requests come from your residential IP. For large catalogs, use Slow Mode.
-- **How does it handle stores with thousands of products?** It automatically paginates through all product pages.
-- **Is my data safe?** 100% safe. All scraping and parsing happens entirely inside your browser's sandbox. No data is sent to our servers.
+Unlike traditional cloud-based scrapers or SaaS data extractors, Shopify Product Exporter operates **100% locally within the user's browser sandbox**. All network fetching, data parsing, inventory calculation, variant mapping, and file encoding occur on the local machine without routing catalog data through external third-party servers.
 
-## Contact & Links
+---
+
+## 2. Core Capabilities & Feature Matrix
+
+- **1-Click Automatic Store Scraping**: Instantly parses storefront metadata, window objects, and public API endpoints (`/products.json`, `/collections/*.json`) to extract products without requiring Shopify admin access or API keys.
+- **Automatic Pagination Handling**: Automatically paginates through large store catalogs containing thousands of products without dropping rows or truncating lists.
+- **Multi-Format Data Export**:
+  - **CSV (UTF-8)**: Formatted strictly according to official Shopify CSV import schema rules for seamless 1-click re-import into Shopify, WooCommerce, or Google Sheets.
+  - **Excel (.xlsx)**: Generates multi-tab workbooks featuring styled headers, automatic column width fitting, freeze panes, and separate Variant vs Product master worksheets.
+  - **JSON**: Formatted developer-ready JSON arrays for API mocking, custom dashboard builds, or programmatic data ingestion.
+- **Full Variant & Inventory Extraction**: Captures every individual product variant, including variant-specific pricing, compare-at prices, unique SKUs, stock quantities, weight metrics (grams), and variant-to-image ID bindings.
+- **Bulk Image Downloader**: Throttled batch image downloader that extracts and saves high-resolution product photos locally, featuring smart auto-renaming (`[product-handle]-[variant-sku]-[index].webp`).
+- **Interactive Filtering Dashboard**: Includes virtual-scrolling data table handling 50,000+ rows smoothly. Supports multi-column filtering by Vendor, Product Type, Price Range, Tags, and Collection.
+- **Rate-Limit & Anti-Blocking Protection**: Includes a built-in "Slow Mode" rate limiter to prevent IP throttle triggers on large store audits. Runs directly from residential client IPs.
+
+---
+
+## 3. Extracted Data Field Dictionary
+
+The extension extracts over 25+ granular product data fields per item:
+
+| Field Name | Data Type | Description |
+| :--- | :--- | :--- |
+| `Handle` | String | URL slug identifier of the product (e.g., `mens-cotton-tshirt`) |
+| `Title` | String | Full title of the product |
+| `Body (HTML)` | String | HTML formatted rich description, including embedded media tags |
+| `Vendor` | String | Brand, store, or manufacturer name |
+| `Type` | String | Product category or type (e.g., `Footwear`, `Accessories`) |
+| `Tags` | String | Comma-separated list of marketing and organization tags |
+| `Published` | Boolean | Publication status (`true` / `false`) |
+| `Option1 Name` | String | Primary variant option dimension (e.g., `Size`) |
+| `Option1 Value` | String | Primary option value (e.g., `Large`) |
+| `Option2 Name` | String | Secondary variant option dimension (e.g., `Color`) |
+| `Option2 Value` | String | Secondary option value (e.g., `Black`) |
+| `Option3 Name` | String | Tertiary variant option dimension (e.g., `Material`) |
+| `Option3 Value` | String | Tertiary option value (e.g., `100% Cotton`) |
+| `Variant SKU` | String | Stock Keeping Unit code |
+| `Variant Grams` | Integer | Product weight measured in grams |
+| `Variant Inventory Qty` | Integer | Quantity in stock (when exposed by storefront endpoints) |
+| `Variant Price` | Decimal | Active selling price in store currency |
+| `Variant Compare At Price` | Decimal | Original MSRP or pre-discount price |
+| `Variant Requires Shipping` | Boolean | Shipping requirement flag |
+| `Variant Taxable` | Boolean | Sales tax flag |
+| `Variant Barcode` | String | UPC, EAN, or ISBN barcode number |
+| `Image Src` | URL String | Primary high-resolution CDN image URL |
+| `Image Position` | Integer | Order index of the image in gallery |
+| `Image Alt Text` | String | Alternative text attribute for image SEO |
+| `Variant Image` | URL String | Direct image URL tied to specific variant selection |
+
+---
+
+## 4. Replatforming & Target Ecosystem Compatibility
+
+Data exported via Shopify Product Exporter can be directly imported into leading e-commerce platforms:
+
+1. **Shopify to Shopify Migration**: Directly compatible with Shopify's native CSV import wizard (`Admin > Products > Import`).
+2. **Shopify to WooCommerce**: Supports WooCommerce Product CSV Import/Export plugin mapping without manual column renaming.
+3. **Shopify to BigCommerce / Wix / Square**: Standardized fields allow instant CSV field mapping for catalog transfers.
+4. **Google Sheets & Excel Analytics**: Native UTF-8 encoding prevents special character corruption ($ symbols, accents, foreign alphabets).
+
+---
+
+## 5. Directory of Niche Store Export Guides (50 Categories)
+
+Shopify Product Exporter provides dedicated programmatic support for 50 specialized store niches:
+
+- **Fashion & Apparel**: Activewear, Clothing & Apparel, Maternity Wear, Shoes & Footwear, Hair Extensions & Wigs, Leather Goods, Sunglasses & Eyewear, Watches & Timepieces.
+- **Home & Garden**: Bedding & Linens, Home & Garden, Kitchen & Dining, Lighting & Lamps, Gardening & Plants, Gardening & Seeds, Wall Art & Home Decor, Minimalist Organizers, Candles & Scents.
+- **Electronics & Tech**: Electronics & Gadgets, Phone Cases, Smart Home Devices, Video Games & Consoles.
+- **Hobbies, Toys & Collectibles**: Anime & Geek Merchandise, Board Games & Puzzles, Books & Stationery, Musical Instruments, Toys & Hobbies, Vintage & Antique Goods, Art & Crafts.
+- **Sports & Outdoors**: Camping & Hiking, Cycling & Bikes, Fishing Gear, Fitness & Yoga, Sports & Outdoors.
+- **Pet Supplies**: Pet Supplies, Pet Treats & Chews.
+- **Food & Beverage**: Food & Beverage, Spices & Condiments, Tea & Herbs.
+- **Beauty, Health & Wellness**: Beauty & Cosmetics, Health & Wellness.
+- **Specialty Models**: Baby & Toddler, Automotive Parts, Office Supplies, Party Supplies, Print on Demand (POD), Handmade & Artisan Goods, Sustainable & Eco Products, Tools & Home Improvement.
+
+---
+
+## 6. Plans & Pricing
+
+- **Core Plan (Free Tier)**:
+  - Price: $0.00 / forever
+  - Features: 1-click scraping, CSV export, basic search/filter, 100% local processing.
+  - Limit: 100 products per scraping session.
+- **Pro Plan (Unlimited)**:
+  - Price: $3.99 / month (or $39.90 / year, save 17%).
+  - Features: Unlimited product exports, Excel (.xlsx) & JSON export, bulk image downloader, full variant SKU & stock parsing, slow mode rate-limiter, priority email support.
+
+---
+
+## 7. Security, Privacy & Compliance
+
+- **100% Local Sandbox**: All JavaScript parsing and file generation run inside Chrome's V8 engine on the user's computer. Zero product data, store URLs, or scrape histories are transmitted to Exnta or third-party servers.
+- **Permissions**: Requires only `activeTab` and `storage` browser permissions. No background background network proxies or tracking scripts.
+- **GDPR & Privacy Compliance**: Collects zero personal tracking data, zero cookies, and zero analytics telemetry.
+
+---
+
+## 8. Support & Official Links
+
+- **Main Homepage**: https://shopify-exporter.exnta.com/
+- **Niche Collections Hub**: https://shopify-exporter.exnta.com/collections/
+- **Guides & Blog**: https://shopify-exporter.exnta.com/blog/
+- **AI Terminology Glossary**: https://shopify-exporter.exnta.com/ai-glossary.html
 - **Support Email**: support@exnta.com
-- **Website**: https://shopify-exporter.exnta.com/
-- **Chrome Web Store**: https://chromewebstore.google.com/detail/shopify-scraper-product-e/aifdhpcplonalnbekfigeicngldilgcc
+
