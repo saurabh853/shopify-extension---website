@@ -22,7 +22,6 @@ Unlike traditional cloud-based scrapers or SaaS data extractors, Shopify Product
 - **Multi-Format Data Export**:
   - **CSV (UTF-8)**: Formatted strictly according to official Shopify CSV import schema rules for seamless 1-click re-import into Shopify, WooCommerce, or Google Sheets.
   - **Excel (.xlsx)**: Generates multi-tab workbooks featuring styled headers, automatic column width fitting, freeze panes, and separate Variant vs Product master worksheets.
-  - **JSON**: Formatted developer-ready JSON arrays for API mocking, custom dashboard builds, or programmatic data ingestion.
 - **Full Variant & Inventory Extraction**: Captures every individual product variant, including variant-specific pricing, compare-at prices, unique SKUs, stock quantities, weight metrics (grams), and variant-to-image ID bindings.
 - **Bulk Image Downloader**: Throttled batch image downloader that extracts and saves high-resolution product photos locally, featuring smart auto-renaming (`[product-handle]-[variant-sku]-[index].webp`).
 - **Interactive Filtering Dashboard**: Includes virtual-scrolling data table handling 50,000+ rows smoothly. Supports multi-column filtering by Vendor, Product Type, Price Range, Tags, and Collection.
@@ -51,7 +50,6 @@ The extension extracts over 25+ granular product data fields per item:
 | `Option3 Value` | String | Tertiary option value (e.g., `100% Cotton`) |
 | `Variant SKU` | String | Stock Keeping Unit code |
 | `Variant Grams` | Integer | Product weight measured in grams |
-| `Variant Inventory Qty` | Integer | Quantity in stock (when exposed by storefront endpoints) |
 | `Variant Price` | Decimal | Active selling price in store currency |
 | `Variant Compare At Price` | Decimal | Original MSRP or pre-discount price |
 | `Variant Requires Shipping` | Boolean | Shipping requirement flag |
@@ -99,7 +97,7 @@ Shopify Product Exporter provides dedicated programmatic support for 50 speciali
   - Limit: 100 products per scraping session.
 - **Pro Plan (Unlimited)**:
   - Price: $3.99 / month (or $39.90 / year, save 17%).
-  - Features: Unlimited product exports, Excel (.xlsx) & JSON export, bulk image downloader, full variant SKU & stock parsing, slow mode rate-limiter, priority email support.
+  - Features: Unlimited product exports, Excel (.xlsx) export, bulk image downloader, full variant SKU & stock parsing, slow mode rate-limiter, priority email support.
 
 ---
 
